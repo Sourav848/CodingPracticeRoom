@@ -15,8 +15,6 @@ public class PrimeNumberMethod {
 		for (int number = start; number < end; number++) {
 			if (isPrime(number)) {
 				primeNumberList.add(number);
-			} else {
-				/* System.out.println(number + " is not a prime number"); */
 			}
 		} System.out.println(primeNumberList);
 	}

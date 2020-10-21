@@ -9,7 +9,7 @@ public class ArrayUserInput {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter no. of elements you want in array:");
 		n = input.nextInt();
-		int a[] = new int[n];
+		int[] a = new int[n];
 		System.out.println("Enter all the elements:");
 		for (int i = 0; i < n; i++) {
 			a[i] = input.nextInt();

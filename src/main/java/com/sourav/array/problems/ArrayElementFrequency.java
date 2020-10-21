@@ -1,12 +1,10 @@
 package com.sourav.array.problems;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class ArrayElementFrequency {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter no. of elements you want in array:");
@@ -14,14 +12,14 @@ public class ArrayElementFrequency {
 		int inc = 0;
 		int inc1 = 0;
 		int n = input.nextInt();
-		int arr[] = new int[n];
+		int[] arr = new int[n];
 		/* String strArray[] = new String[3]; */
-		int frr[] = new int[n];
-		int prr[] = new int[n];
+		int[] frr = new int[n];
+		int[] prr = new int[n];
 		for (int i = 0; i < n; i++) {
 			arr[i] = input.nextInt();
 		}
-		 bubblesort(arr, n); 
+		 bubblesort(arr, n);
 		/* Arrays.sort(arr); */
 		for (int i = 0; i < arr.length-1; i++) {
 		if (arr[i] == arr[i+1]) 
@@ -42,7 +40,7 @@ public class ArrayElementFrequency {
 		
 	}
 
-	static void bubblesort(int arr[], int n) {
+	static void bubblesort(int[] arr, int n) {
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				if (arr[i] < arr[j]) {
