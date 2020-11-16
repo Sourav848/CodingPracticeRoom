@@ -1,24 +1,40 @@
 package com.sourav.basic.problems;
 
-public class rough {  
-    public static void main(String[] args) {  
-    int[] a = {10, 9, 7, 101, 23, 44, 12, 78, 34, 23};  
-    for(int i=0;i<10;i++)  
-    {  
-        for (int j=0;j<10;j++)  
-        {  
-            if(a[i]<a[j])  
-            {  
-                int temp = a[i];  
-                a[i]=a[j];  
-                a[j] = temp;   
-            }  
-        }  
-    }  
-    System.out.println("Printing Sorted List ...");  
-    for(int i=0;i<10;i++)  
-    {  
-        System.out.print(" " +a[i]);  
-    }  
-}  
-}  
+import java.util.Scanner;
+
+class rough implements Runnable {
+
+	   private Thread t;
+	   private String threadName;
+	   
+	   rough (String threadName){
+	       this.threadName = threadName;
+	   }
+
+	   public void run() 
+	   {
+	       while (true)
+	            System.out.print(threadName);
+	   }
+
+	   public void start ()
+	   {
+	      if (t == null)
+	      {
+	         t = new Thread (this, threadName);
+	         t.start ();
+	      }
+	   }
+	}
+
+	 class TestThread {
+
+	   public static void main(String args[]) {
+
+	      rough A = new rough( "A");
+	      rough B = new rough( "B");
+
+	      B.start();
+	      A.start();
+	   }
+	}
