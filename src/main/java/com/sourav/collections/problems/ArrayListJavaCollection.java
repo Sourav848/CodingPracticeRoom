@@ -22,6 +22,7 @@ public class ArrayListJavaCollection {
 	public static void main(String args[]){  
 		//ArrayList<String> list=new ArrayList<String>();//Creating arraylist  
 		ArrayList<Integer> arr=new ArrayList<Integer>();
+		ArrayList<Integer> arr1=new ArrayList<Integer>();
 		arr.add(1);//Adding object in arraylist  
 		arr.add(2);  
 		arr.add(3);  
