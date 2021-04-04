@@ -2,6 +2,12 @@ package com.sourav.algorithms.sorting.problems;
 
 import java.util.Scanner;
 
+//1. Select the smallest value in the list.
+//2. Swap smallest value with the first value of the list.
+//3. Again select the smallest value in the list(exclude first value).
+//4. Swap the value with the second element of the list.
+//5. Keep doing n-1 times to place all n values until it is sorted array.
+
 public class SelectionSort {
 
 	public static void main(String[] args) {
@@ -39,9 +45,3 @@ public class SelectionSort {
 	}
 
 }
-
-// 1. Select the smallest value in the list.
-// 2. Swap smallest value with the first value of the list.
-// 3. Again select the smallest value in the list(exclude first value).
-// 4. Swap the value with the second element of the list.
-// 5. Keep doing n-1 times to place all n values until it is sorted array.
