@@ -36,7 +36,6 @@ public class TwoSumIndicies {
 		for (int i = 0; i < nums.length; i++) {
 			int val = target - nums[i];
 			Integer secondIndex = values.get(val);
-			//System.out.print(secondIndex);
 			if (secondIndex != null && secondIndex != i) {
 				answer[0] = i;
 				answer[1] = secondIndex;
@@ -46,6 +45,32 @@ public class TwoSumIndicies {
 		return answer;
 	}
 }
+
+//https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
+
+
+/*static boolean hasArrayTwoCandidates(
+        int A[],
+        int arr_size, int sum)
+    {
+        int l, r;
+ 
+        //sorting array
+        Arrays.sort(A);
+ 
+ /// binary search approach for check candidates.
+        l = 0;
+        r = arr_size - 1;
+        while (l < r) {
+            if (A[l] + A[r] == sum)
+                return true;
+            else if (A[l] + A[r] < sum)
+                l++;
+            else // A[i] + A[j] > sum
+                r--;
+        }
+        return false;
+    }*/
 
 /*
  * You can use a hashmap to store the first array in the following manner:

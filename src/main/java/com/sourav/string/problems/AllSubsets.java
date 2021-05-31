@@ -3,7 +3,7 @@ package com.sourav.string.problems;
 public class AllSubsets {  
     public static void main(String[] args) {  
   
-        String str = "FUN";  
+        String str = "ABC";  
         int len = str.length();  
         int temp = 0;  
         //Total possible subsets for string of size n is n*(n+1)/2  

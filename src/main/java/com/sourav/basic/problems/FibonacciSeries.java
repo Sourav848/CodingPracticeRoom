@@ -19,7 +19,7 @@ public class FibonacciSeries {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter number of elements");
 		int element = sc.nextInt();
-		System.out.print(n1+" "+n2);//printing 0 and 1
+		System.out.print(n1 + " " + n2);// printing 0 and 1
 		printFibonacci(element);
 	}
 

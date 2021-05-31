@@ -15,6 +15,7 @@ public class ExcelTitleToColumn {
 		for (int i = 0; i < s.length(); i++) {
 			result *= 26;
 			result += s.charAt(i) - 'A' + 1;
+			//System.out.print("AA" + ('C' - 'A'));
 		}
 		return result;
 	}

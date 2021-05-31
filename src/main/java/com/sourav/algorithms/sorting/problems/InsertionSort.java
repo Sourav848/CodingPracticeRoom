@@ -3,6 +3,8 @@ package com.sourav.algorithms.sorting.problems;
 import java.util.*;
 
 //In this algorithm, we insert each element onto its proper place in the sorted array. 
+//Expected Time Complexity: O(NlogN).
+
 
 public class InsertionSort {
 
