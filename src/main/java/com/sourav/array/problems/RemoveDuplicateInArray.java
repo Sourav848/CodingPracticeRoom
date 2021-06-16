@@ -1,5 +1,6 @@
 package com.sourav.array.problems;
 
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -27,11 +28,21 @@ public class RemoveDuplicateInArray {
 			hashset.add(arr[i]);
 		}
 		
-		System.out.print("Only Unique elements through hashet ");  
+		System.out.println("Only Unique elements through hashet ");  
 		for (Integer i : hashset) {
-			System.out.print(i+" ");  
+			System.out.println(i+" ");  
 		}
 	}
+	
+	 public static void findDuplicate(int[] nums) {	        
+        Set<Integer> seen = new HashSet<Integer>();
+        for (int num : nums) {
+            if (seen.contains(num)) {
+            	System.out.println("Duplicate element is: "+num);  
+            }
+            seen.add(num);
+        }
+    }
 	
 	
 	
@@ -41,8 +52,10 @@ public class RemoveDuplicateInArray {
         length = removeDuplicateElements(arr, length);  
         //printing array elements  
         for (int i=0; i<length; i++)  
-           System.out.print(arr[i]+" ");  
+           System.out.println(arr[i]+" ");  
         removeDuplicate_linkedhashset(arr, length);
+        //To find duplicate elements
+        findDuplicate(arr);
     }  
 
 }

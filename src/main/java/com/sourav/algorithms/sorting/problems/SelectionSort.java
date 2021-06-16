@@ -36,7 +36,7 @@ public class SelectionSort {
 		int locIndex = k,
 			min = a[k];
 			for (int j = k; j < n; j++) {
-				if (min > a[j]) {
+				if (a[j] < min) {
 					min = a[j];
 					locIndex = j;
 				}	

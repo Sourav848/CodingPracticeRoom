@@ -29,5 +29,19 @@ class RotateLeft {
         for(int i = 0; i< arr.length; i++){  
             System.out.print(arr[i] + " ");  
         }  
-    }  
+    }
+    
+    
+    static int[] rotLeft(int[] a, int d) {
+		int n = a.length;
+		int[] rotArray = new int[n];
+
+		for (int oldIndex = 0; oldIndex < n; oldIndex++) {
+			int newIndex = (oldIndex + n - d) % n;      
+			rotArray[newIndex] = a[oldIndex];
+		}
+
+		return rotArray;
+
+	}
 }  

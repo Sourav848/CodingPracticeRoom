@@ -1,69 +1,145 @@
 package com.sourav.linkedlist.problems;
 
-public class SingleLinkedList {    
-    //Represent a node of the singly linked list    
-    class Node{    
-        int data;    
-        Node next;    
-            
-        public Node(int data) {    
-            this.data = data;    
-            this.next = null;    
-        }    
-    }    
-     
-    //Represent the head and tail of the singly linked list    
-    public Node head = null;    
-    public Node tail = null;    
-        
-    //addNode() will add a new node to the list    
-    public void addNode(int data) {    
-        //Create a new node    
-        Node newNode = new Node(data);    
-            
-        //Checks if the list is empty    
-        if(head == null) {    
-            //If list is empty, both head and tail will point to new node    
-            head = newNode;    
-            tail = newNode;    
-        }    
-        else {    
-            //newNode will be added after tail such that tail's next will point to newNode    
-            tail.next = newNode;    
-            //newNode will become new tail of the list    
-            tail = newNode;    
-        }    
-    }    
-        
-    //display() will display all the nodes present in the list    
-    public void display() {    
-        //Node current will point to head    
-        Node current = head;    
-            
-        if(head == null) {    
-            System.out.println("List is empty");    
-            return;    
-        }    
-        System.out.println("Nodes of singly linked list: ");    
-        while(current != null) {    
-            //Prints each node by incrementing pointer    
-            System.out.print(current.data + " ");    
-            current = current.next;    
-        }    
-        System.out.println();    
-    }    
-        
-    public static void main(String[] args) {    
-            
-        SingleLinkedList sList = new SingleLinkedList();    
-            
-        //Add nodes to the list    
-        sList.addNode(1);    
-        sList.addNode(2);    
-        sList.addNode(3);    
-        sList.addNode(4);    
-            
-        //Displays the nodes present in the list    
-        sList.display();    
-    }    
-}    
+
+//Java program to implement
+//a Singly Linked List
+public class SingleLinkedList {
+
+	Node head; // head of list
+
+	// Linked list Node.
+	// This inner class is made static
+	// so that main() can access it
+	static class Node {
+
+		int data;
+		Node next;
+
+		// Constructor
+		Node(int d)
+		{
+			data = d;
+			next = null;
+		}
+	}
+	public static SingleLinkedList insert_at_first(SingleLinkedList list, int data)
+	{
+		// Create a new node with given data
+		Node new_node = new Node(data);
+		new_node.next = null;
+
+		// If the Linked List is empty,
+		// then make the new node as head
+		if (list.head == null) {
+			list.head = new_node;
+		}
+		else {
+			// Else traverse till the last node
+			// and insert_at_last the new_node there
+			new_node.next = list.head;
+			list.head = new_node;			
+		}
+
+		// Return the list by head
+		return list;
+	}
+
+	// Method to insert_at_last a new node
+	public static SingleLinkedList insert_at_last(SingleLinkedList list, int data)
+	{
+		// Create a new node with given data
+		Node new_node = new Node(data);
+		new_node.next = null;
+
+		// If the Linked List is empty,
+		// then make the new node as head
+		if (list.head == null) {
+			list.head = new_node;
+		}
+		else {
+			// Else traverse till the last node
+			// and insert_at_last the new_node there
+			Node last  = list.head;
+			while (last .next != null) {
+				last  = last .next;
+			}
+			
+			// Insert the new_node at last node
+             last.next = new_node;
+		}
+
+		// Return the list by head
+		return list;
+	}
+	
+	public static SingleLinkedList insert_at_pos(SingleLinkedList list, int data, int pos)
+	{
+		// Create a new node with given data
+		Node new_node = new Node(data);//temp1
+		new_node.next = null;
+
+		// If the Linked List is empty,
+		// then make the new node as head
+		if (list.head == null) {
+			list.head = new_node;
+		}
+		else {
+			// Else traverse till the last node
+			// and insert_at_last the new_node there
+			Node last  = list.head; //temp2
+			
+             for(int i=1; i<=pos-2;i++) {
+            	 last  = last.next;
+             }
+			// Insert the new_node at last node
+             new_node.next = last .next;
+             last.next = new_node;
+		}
+
+		// Return the list by head
+		return list;
+	}
+
+	// Method to print the LinkedList.
+	public static void printList(SingleLinkedList list)
+	{
+		Node currNode = list.head;
+	
+		System.out.print("LinkedList: ");
+	
+		// Traverse through the LinkedList
+		while (currNode != null) {
+			// Print the data at current node
+			System.out.print(currNode.data + " ");
+	
+			// Go to next node
+			currNode = currNode.next;
+		}
+	}
+	
+	// Driver code
+	public static void main(String[] args)
+	{
+		/* Start with the empty list. */
+		SingleLinkedList list = new SingleLinkedList();
+
+		//
+		// ******INSERTION******
+		//
+
+		// Insert the values
+		list = insert_at_last(list, 1);
+		list = insert_at_last(list, 2);
+		list = insert_at_last(list, 3);
+		list = insert_at_last(list, 4);
+		list = insert_at_last(list, 5);
+		list = insert_at_last(list, 6);
+		list = insert_at_last(list, 7);
+		list = insert_at_last(list, 8);
+		list = insert_at_pos(list, 9, 2);
+		list = insert_at_first(list, 10);
+
+		// Print the LinkedList
+		printList(list);
+	}
+}

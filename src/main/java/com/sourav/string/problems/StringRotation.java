@@ -10,7 +10,8 @@ public class StringRotation
 	 * zero.
 	 */
     public static void main(String[] args) {    
-        String str1 = "abcde", str2 = "deabc";    
+        String str1 = "abcde", str2 = "deabc";  
+       //boolean areRotation =  areRotations(str1, str2);
             
         if(str1.length() != str2.length()){    
             System.out.println("Second string is not a rotation of first string");    
@@ -25,4 +26,17 @@ public class StringRotation
                 System.out.println("Second string is not a rotation of first string");    
         }    
     }    
+    
+    static boolean areRotations(String str1, String str2)
+	{
+      String temp = str1.concat(str1);
+      int len = str2.length();
+      
+      for (int i=0; i<temp.length(); i++) {
+      String rotateValue = temp.substring(i, i+len);        
+        if (rotateValue.equals(str2))
+           return true;
+      }
+      return false;
+	}
 }     
