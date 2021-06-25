@@ -3,7 +3,7 @@ package com.sourav.linkedlist.problems;
 
 //Java program to implement
 //a Singly Linked List
-public class SingleLinkedList {
+public class InsertionSingleLinkedList {
 
 	Node head; // head of list
 
@@ -22,7 +22,7 @@ public class SingleLinkedList {
 			next = null;
 		}
 	}
-	public static SingleLinkedList insert_at_first(SingleLinkedList list, int data)
+	public static InsertionSingleLinkedList insert_at_first(InsertionSingleLinkedList list, int data)
 	{
 		// Create a new node with given data
 		Node new_node = new Node(data);
@@ -45,7 +45,7 @@ public class SingleLinkedList {
 	}
 
 	// Method to insert_at_last a new node
-	public static SingleLinkedList insert_at_last(SingleLinkedList list, int data)
+	public static InsertionSingleLinkedList insert_at_last(InsertionSingleLinkedList list, int data)
 	{
 		// Create a new node with given data
 		Node new_node = new Node(data);
@@ -72,7 +72,7 @@ public class SingleLinkedList {
 		return list;
 	}
 	
-	public static SingleLinkedList insert_at_pos(SingleLinkedList list, int data, int pos)
+	public static InsertionSingleLinkedList insert_at_pos(InsertionSingleLinkedList list, int data, int pos)
 	{
 		// Create a new node with given data
 		Node new_node = new Node(data);//temp1
@@ -101,7 +101,7 @@ public class SingleLinkedList {
 	}
 
 	// Method to print the LinkedList.
-	public static void printList(SingleLinkedList list)
+	public static void printList(InsertionSingleLinkedList list)
 	{
 		Node currNode = list.head;
 	
@@ -121,7 +121,7 @@ public class SingleLinkedList {
 	public static void main(String[] args)
 	{
 		/* Start with the empty list. */
-		SingleLinkedList list = new SingleLinkedList();
+		InsertionSingleLinkedList list = new InsertionSingleLinkedList();
 
 		//
 		// ******INSERTION******
