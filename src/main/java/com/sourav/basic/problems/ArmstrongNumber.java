@@ -19,7 +19,7 @@ public class ArmstrongNumber {
 				armstrongNumber = armstrongNumber + modValue*modValue*modValue;
 			}
 			if (armstrongNumber == num)
-				System.out.println("armstrong number");
+				System.out.println("armstrong number"); //153 is armstrong number
 			else
 				System.out.println("Not armstrong number"); 
 			i++;

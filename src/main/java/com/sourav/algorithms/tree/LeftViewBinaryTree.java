@@ -3,7 +3,17 @@ package com.sourav.algorithms.tree;
 import java.util.ArrayList;
 
 public class LeftViewBinaryTree {
+
 	Node root;
+
+	static class Node {
+		int data;
+		Node left = null, right = null;
+
+		Node(int key) {
+			this.data = key;
+		}
+	}
 
 	public static ArrayList<Integer> leftView(Node root) {
 		ArrayList<Integer> output = new ArrayList<Integer>();
@@ -29,7 +39,7 @@ public class LeftViewBinaryTree {
 	}
 
 	public static void main(String[] args) {
-		TreeHeight tree = new TreeHeight();
+		LeftViewBinaryTree tree = new LeftViewBinaryTree();
 
 		tree.root = new Node(1);
 		tree.root.left = new Node(2);
@@ -38,33 +48,7 @@ public class LeftViewBinaryTree {
 		tree.root.left.right = new Node(5);
 
 		System.out.println("Left view of Binary tree is : " + leftView(tree.root));
-		System.out.println("Left view of Binary tree is : " + rightView(tree.root));
 
 	}
 
-	
-	
-	public static ArrayList<Integer> rightView(Node root) {
-		ArrayList<Integer> output = new ArrayList<Integer>();
-		depthFirstSearchsecond(root, 0, output);
-		return output;
-	}
-
-	private static void depthFirstSearchsecond(Node root, int count, ArrayList<Integer> output) {
-		if (root == null) {
-			return;
-		}
-		if (count >= output.size()) {
-			output.add(root.data);
-		}
-		
-		if (root.right != null) {
-			depthFirstSearch(root.right, count + 1, output);
-		}
-
-		if (root.left != null) {
-			depthFirstSearch(root.left, count + 1, output);
-		}
-
-	}
 }

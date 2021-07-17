@@ -1,9 +1,9 @@
 package com.sourav.linkedlist.problems;
 
-//Java program to detect loop in a linked list
+//Java program to detect and remove loop in a linked list
 import java.util.*;
 
-public class DetectLoop {
+public class DetectandRemove {
 
 	static Node head; // head of list
 
@@ -19,7 +19,7 @@ public class DetectLoop {
 	}
 
 	/* Inserts a new Node at front of the list. */
-	public void push(int new_data)
+	static public void push(int new_data)
 	{
 		/* 1 & 2: Allocate the Node &
 				Put in the data*/
@@ -32,24 +32,39 @@ public class DetectLoop {
 		head = new_node;
 	}
 
-	// Returns true if there is a loop in linked              Floyd detection algorithm
+	// Function to print the linked list
+	void printList(Node node)
+	{
+		while (node != null) {
+			System.out.print(node.data + " ");
+			node = node.next;
+		}
+	}
+
+	// Returns true if the loop is removed from the linked
 	// list else returns false.
-	static boolean detectLoop(Node h)
+	static boolean removeLoop(Node h)
 	{
 		HashSet<Node> s = new HashSet<Node>();
+		Node prev = null;
 		while (h != null) {
 			// If we have already has this node
-			// in hashmap it means their is a cycle
-			// (Because you we encountering the
-			// node second time).
-			if (s.contains(h))    // remind that we are checking node address not value
+			// in hashmap it means their is a cycle and we
+			// need to remove this cycle so set the next of
+			// the previous pointer with null.
+
+			if (s.contains(h)) { // remind that we are checking node address not value
+				prev.next = null;
 				return true;
+			}
 
 			// If we are seeing the node for
 			// the first time, insert it in hash
-			s.add(h);
-
-			h = h.next;
+			else {
+				s.add(h);
+				prev = h;
+				h = h.next;
+			}
 		}
 
 		return false;
@@ -58,7 +73,7 @@ public class DetectLoop {
 	/* Driver program to test above function */
 	public static void main(String[] args)
 	{
-		DetectLoop llist = new DetectLoop();
+		DetectandRemove llist = new DetectandRemove();
 
 		llist.push(20);
 		llist.push(4);
@@ -68,11 +83,13 @@ public class DetectLoop {
 		/*Create loop for testing */
 		llist.head.next.next.next.next = llist.head;
 
-		if (detectLoop(head))
-			System.out.println("Loop found");
+		if (removeLoop(head)) {
+			System.out.println("Linked List after removing loop");
+			llist.printList(head);
+		}
 		else
-			System.out.println("No Loop");
+			System.out.println("No Loop found");
 	}
 }
 
-//This code is contributed by Arnav Kr. Mandal.
+//This code is contributed by Animesh Nag.

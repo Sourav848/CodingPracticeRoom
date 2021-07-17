@@ -58,35 +58,7 @@ public class DeletionSingleLinkedList {
                 head = tail = null;  
             }  
         }  
-    }
-    
-    
-    public void deleteByNode(int data)
-    {
-        // Store head node
-        Node temp = head, prev = null;
- 
-        // If head node itself holds the data to be deleted
-        if (temp != null && temp.data == data) {
-            head = temp.next; // Changed head
-            return;
-        }
- 
-        // Search for the data to be deleted, keep track of
-        // the previous node as we need to change temp.next
-        while (temp != null && temp.data != data) {
-            prev = temp;
-            temp = temp.next;
-        }
- 
-        // If data was not present in linked list
-        if (temp == null)
-            return;
- 
-        // Unlink the node from linked list
-        prev.next = temp.next;
-    }
-    
+    }   
     
     public void deleteNode_atLast()
     {
@@ -144,6 +116,33 @@ public class DeletionSingleLinkedList {
         Node next = temp.next.next;
  
         temp.next = next;  // Unlink the deleted node from list
+    }
+    
+    
+    public void deleteByNode(int data)
+    {
+        // Store head node
+        Node temp = head, prev = null;
+ 
+        // If head node itself holds the data to be deleted
+        if (temp != null && temp.data == data) {
+            head = temp.next; // Changed head
+            return;
+        }
+ 
+        // Search for the data to be deleted, keep track of
+        // the previous node as we need to change temp.next
+        while (temp != null && temp.data != data) {
+            prev = temp;
+            temp = temp.next;
+        }
+ 
+        // If data was not present in linked list
+        if (temp == null)
+            return;
+ 
+        // Unlink the node from linked list
+        prev.next = temp.next;
     }
   
     //display() will display all the nodes present in the list  

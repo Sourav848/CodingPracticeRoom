@@ -2,6 +2,8 @@ package com.sourav.array.problems;
 
 public class MissingNumber {
 	
+	
+	//edge case : if a[] doesn't consist 0.
 	static int missingNumber(int a[], int n) {
         
 		int n_elements_sum = n * (n + 1) / 2;

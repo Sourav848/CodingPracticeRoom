@@ -33,20 +33,6 @@ public class ThreadRunnable {
 		}
 		t2.start();
 		
-		/*Runnable obj1 = () -> {
-			for (int i = 0; i < 4; i++) {
-				System.out.println("Hi");
-				try {Thread.sleep(1000)}catch(Exception e){}
-			}
-		};
-
-		Runnable obj2 = () -> {
-			for (int i = 0; i < 4; i++) {
-				System.out.println("Hello");
-				try {Thread.sleep(1000)}catch(Exception e){}
-			}
-		};*/
-		
 	}
 
 }

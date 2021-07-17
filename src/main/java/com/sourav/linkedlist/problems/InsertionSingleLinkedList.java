@@ -60,8 +60,8 @@ public class InsertionSingleLinkedList {
 			// Else traverse till the last node
 			// and insert_at_last the new_node there
 			Node last  = list.head;
-			while (last .next != null) {
-				last  = last .next;
+			while (last.next != null) {
+				last  = last.next;
 			}
 			
 			// Insert the new_node at last node
@@ -92,7 +92,7 @@ public class InsertionSingleLinkedList {
             	 last  = last.next;
              }
 			// Insert the new_node at last node
-             new_node.next = last .next;
+             new_node.next = last.next;
              last.next = new_node;
 		}
 

@@ -1,49 +1,28 @@
 package com.sourav.basic.problems;
 
-import java.util.Arrays;
 
-class rough {
-	
-	 public static void merge(long arr1[], long arr2[], int n, int m) 
-	{
-		// code here
-		long[] arr3 = new long[n + m];
-		int j = 0;
-		for (int i = 0; i < m + n; i++) {
-			if (i < n)
-				arr3[i] = arr1[i];
-			else {
-				arr3[i] = arr2[j];
-				j++;
+public class rough {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+
+		int n = 5;
+
+		for (int i = 0; i < 10; i = i + n) {
+			int n1 = i;
+			int n2 = n + i;
+
+			if (i == n1 && i < n2 && n2 < 10) { // subset according to n range
+				System.out.println("range" + i + "to" + (n2 - 1));
+				// print("range"+i "to" +(n2-1))
+			} else { // to handle remainder of subset
+				int remain = 9 - i;
+				if (remain != 0)
+					System.out.println("range" + i + "to" + "9");
+				else
+					System.out.println("range" + i);
 			}
-		}
-		Arrays.sort(arr3);
-		j = 0;
-		for (int i = 0; i < m + n; i++) {
-			if (i < n)
-				arr1[i] = arr3[i];
-			else {
-				arr2[j] = arr3[i];
-				j++;
-			}
-		}
-		for (int i = 0; i < n; i++) {
-			System.out.print(arr1[i]);
-		}
-		for (int i = 0; i < m; i++) {
-			System.out.print(arr2[i]);
+
 		}
 	}
-	
-	
-	
-    public static void main(String args[] ) throws Exception {
-    	
-     long arr1[] = {1, 3, 5, 7}; 
-     long arr2[] = {0, 2, 6, 8, 9};
-     
-     merge(arr1, arr2, arr1.length, arr2.length);
-    	
-    }
-
 }

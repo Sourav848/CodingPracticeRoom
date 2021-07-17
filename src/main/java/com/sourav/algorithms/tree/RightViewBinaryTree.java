@@ -2,9 +2,21 @@ package com.sourav.algorithms.tree;
 
 import java.util.ArrayList;
 
-public class RightViewBinaryTree {
-	Node root;
 
+public class RightViewBinaryTree {
+	
+	Node root;
+	
+	static class Node
+	{
+		int data;
+		Node left = null, right = null;
+
+		Node(int key) {
+			this.data = key;
+		}
+	}
+	
 	public static ArrayList<Integer> rightView(Node root) {
 		ArrayList<Integer> output = new ArrayList<Integer>();
 		depthFirstSearch(root, 0, output);
@@ -30,7 +42,7 @@ public class RightViewBinaryTree {
 	}
 
 	public static void main(String[] args) {
-		TreeHeight tree = new TreeHeight();
+		RightViewBinaryTree tree = new RightViewBinaryTree();
 
 		tree.root = new Node(1);
 		tree.root.left = new Node(2);

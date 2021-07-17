@@ -4,13 +4,16 @@ public class Permutation {
 
 //Java program to print all the permutations
 //of the given string
-
-	public static void main(String[] args)
+	
+	public String swap(String a, int i, int j)
 	{
-        String str = "DEF";
-		int n = str.length();
-		Permutation permutation = new Permutation();
-		permutation.permute(str, 0, n-1);
+		char temp;
+		char[] charArray = a.toCharArray();
+		temp = charArray[i] ;
+		charArray[i] = charArray[j];
+		charArray[j] = temp;
+		//System.out.println(String.valueOf(charArray));
+		return String.valueOf(charArray);
 	}
 
 	/**
@@ -41,14 +44,16 @@ public class Permutation {
 	* @param j position 2
 	* @return swapped string
 	*/
-	public String swap(String a, int i, int j)
+	
+	
+	
+	public static void main(String[] args)
 	{
-		char temp;
-		char[] charArray = a.toCharArray();
-		temp = charArray[i] ;
-		charArray[i] = charArray[j];
-		charArray[j] = temp;
-		//System.out.println(String.valueOf(charArray));
-		return String.valueOf(charArray);
+        String str = "DEF";
+		int n = str.length();
+		Permutation permutation = new Permutation();
+		permutation.permute(str, 0, n-1);
 	}
+	
+	
 }
