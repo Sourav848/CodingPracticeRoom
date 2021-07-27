@@ -25,6 +25,4 @@
  * 
  * @Override public void overrideMethod(String str) { System.out.println(str); }
  * }
- * 
- * 
  */

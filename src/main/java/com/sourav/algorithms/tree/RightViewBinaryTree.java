@@ -50,7 +50,7 @@ public class RightViewBinaryTree {
 		tree.root.left.left = new Node(4);
 		tree.root.left.right = new Node(5);
 
-		System.out.println("Left view of Binary tree is : " + rightView(tree.root));
+		System.out.println("Right view of Binary tree is : " + rightView(tree.root));
 
 	}
 

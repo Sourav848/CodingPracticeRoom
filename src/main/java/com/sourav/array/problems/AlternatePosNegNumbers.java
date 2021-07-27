@@ -48,7 +48,7 @@ public class AlternatePosNegNumbers {
 	public static void main(String[] args) throws java.lang.Exception {
 
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter no. of elements you want in first array:");
+		System.out.print("Enter no. of elements you want in array:");
 		int n = input.nextInt();
 		int a[] = new int[n];
 		for (int i = 0; i < n; i++) {
