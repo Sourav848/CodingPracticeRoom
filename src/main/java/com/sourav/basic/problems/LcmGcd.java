@@ -2,6 +2,8 @@ package com.sourav.basic.problems;
 
 public class LcmGcd {
 
+	//gcd is common factor
+	
 	static int[] lcmAndGcd(int A, int B) {
 		// code here
 		int[] ar = new int[2];

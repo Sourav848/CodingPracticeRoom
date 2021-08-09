@@ -33,7 +33,6 @@ public class LongestConsecutiveSubsequence {
 	          count = 1;
 	      }
 	   } 
-	        
 	        return longestNum;
 	}
 	
@@ -44,7 +43,7 @@ public class LongestConsecutiveSubsequence {
 	      int arr[] = {1, 2, 3, 9, 5, 5, 11, 12, 13, 14, 45, 65, 77, 78};// Test case for first Loop
 	 //   int arr[] = {-2, 3, 4, 5, 1}; // Test case for second Loop
 
-	System.out.println(findLongestConseqSubseq(arr, arr.length));
+	      System.out.println(findLongestConseqSubseq(arr, arr.length));
 	
 	
 	    /*Input:

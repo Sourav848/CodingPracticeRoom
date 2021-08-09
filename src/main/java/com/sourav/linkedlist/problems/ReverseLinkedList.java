@@ -61,5 +61,3 @@ class ReverseLinkedList {
 	}
 }
 
-//This code has been contributed by Mayank Jaiswal
-

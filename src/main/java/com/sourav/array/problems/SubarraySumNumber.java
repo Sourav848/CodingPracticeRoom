@@ -1,14 +1,14 @@
 package com.sourav.array.problems;
 
-//Java program to find number of subarrays
-//with sum exactly equal to k.
 import java.util.HashMap;
 
 
-//Number of subarrays having sum exactly equal to k
+//Number of subarrays having sum exactly equal to k.
 
 public class SubarraySumNumber {
 
+	//Technique : Prefix sum
+	
 	static int findSubarraySum(int arr[], int n, int sum) {
 		HashMap<Integer, Integer> prevSum = new HashMap<>();
 
@@ -38,11 +38,13 @@ public class SubarraySumNumber {
 
 	public static void main(String[] args) {
 
-		int arr[] = { 10, 2, -2, -20, 10 };
-		int sum = 10;
+		//int arr[] = { 10, 2, -2, -20, 10 };
+		//int sum = 10;
+		
+		int arr[] = { 3, 3, 5, 12, -6 };
+		int sum = 6;
 		int n = arr.length;
 		System.out.println(findSubarraySum(arr, n, sum));
 	}
 }
 
-//This code is contributed by Rituraj Jain

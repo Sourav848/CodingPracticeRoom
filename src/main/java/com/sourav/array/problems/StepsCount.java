@@ -23,7 +23,8 @@ public class StepsCount {
 	
 	public static void main(String[] args) {
 		
-		int n = 84;
+		//int n = 84; overflow testcase
+		int n = 4;
 		System.out.println("Number of ways = " +countWays(n));
 		
 		//Input: n = 4

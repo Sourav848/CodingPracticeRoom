@@ -44,6 +44,8 @@ public class TreeHeight {
 
 		System.out.println("Height of tree is : " +
 									TreeHeight.maxDepth(tree.root));
+		
+		// If There are 3 nodes in this path that are connected by 2 edges, so height is 2 .
 	}
 
 }

@@ -5,10 +5,10 @@ public class Permutation {
 //Java program to print all the permutations
 //of the given string
 	
-	public String swap(String a, int i, int j)
+	public String swap(String str, int i, int j)
 	{
 		char temp;
-		char[] charArray = a.toCharArray();
+		char[] charArray = str.toCharArray();
 		temp = charArray[i] ;
 		charArray[i] = charArray[j];
 		charArray[j] = temp;

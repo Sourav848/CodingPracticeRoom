@@ -32,7 +32,6 @@ public class SmallestSubarraySumGreaterThanX {
         return min_len;
     }
 	
-	
 	public static void main(String[] args) {
 
 		int arr[] = {1, 4, 45, 6, 0, 19};
