@@ -1,53 +1,27 @@
 package com.sourav.basic.problems;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class rough {
 
-	static int arr[] = new int[] { 1, 5, 7, -1, 5 };
-	 
-    // Returns number of pairs in arr[0..n-1] with sum equal
-    // to 'sum'
-    static int getPairsCount(int n, int sum)
-	    {
-	        HashMap<Integer, Integer> hm = new HashMap<>();
-	 
-	        // Store counts of all elements in map hm
-	        for (int i = 0; i < n; i++) {
-	 
-	            // initializing value to 0, if key not found
-	            if (!hm.containsKey(arr[i]))
-	                hm.put(arr[i], 0);
-	 
-	            hm.put(arr[i], hm.get(arr[i]) + 1);
-	        }
-	        int twice_count = 0;
-	 
-	        // iterate through each element and increment the
-	        // count (Notice that every pair is counted twice)
-	        for (int i = 0; i < n; i++) {
-	            if (hm.get(sum - arr[i]) != null)
-	                twice_count += hm.get(sum - arr[i]);
-	 
-	            // if (arr[i], arr[i]) pair satisfies the
-	            // condition, then we need to ensure that the
-	            // count is decreased by one such that the
-	            // (arr[i], arr[i]) pair is not considered --> {0, 5, 7} = sum = 0;
-	            if (sum - arr[i] == arr[i])
-	                twice_count--;
-	        }
-	 
-	        // return the half of twice_count
-	        return twice_count / 2;
-	    }
- 
-    // Driver method to test the above function
-    public static void main(String[] args)
-    {
- 
-        int sum = 6;
-        System.out.println(
-            "Count of pairs is "
-            + getPairsCount(arr.length, sum));
-    }
+	public static void main(String[] args)
+	{
+		
+		
+		System.out.println(Math.abs(-2));
+		
+	}
+	/*                    HL= 0 = (10, 60)
+					 	     10
+						    /  \
+				-1 = (20) 20   30 1 = (30)
+						  / \ 
+		    -2 = (40)	 40  60     
+						
+						Output: [40, 20, 10, 30]  */
+
 }

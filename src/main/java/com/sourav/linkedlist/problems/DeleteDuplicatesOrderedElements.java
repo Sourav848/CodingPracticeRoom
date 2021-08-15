@@ -1,7 +1,7 @@
 package com.sourav.linkedlist.problems;
 
 
-public class DeleteDuplicates {
+public class DeleteDuplicatesOrderedElements {
 	
 	//Represent a node of the singly linked list  
 	static class Node{  
@@ -39,7 +39,7 @@ public class DeleteDuplicates {
      
     public static void main(String[] args)
 	{
-    	DeleteDuplicates list = new DeleteDuplicates();
+    	DeleteDuplicatesOrderedElements list = new DeleteDuplicatesOrderedElements();
 		list.head = new Node(85);
 		list.head.next = new Node(15);
 		list.head.next.next = new Node(15);

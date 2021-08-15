@@ -1,9 +1,5 @@
 package com.sourav.linkedlist.problems;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class CheckCircularLinkedList {
 
 	static Node head;

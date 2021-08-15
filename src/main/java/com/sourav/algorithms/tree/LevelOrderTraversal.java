@@ -67,6 +67,15 @@ import java.util.Queue;
 				System.out.print(al+ " ");
 			
 		}
+			
+			
+		/*	Input:
+		        10
+		     /      \
+		    20       30
+		  /   \
+		 40   60
+		Output:10 20 30 40 60 */
 	}
 		
 	}
