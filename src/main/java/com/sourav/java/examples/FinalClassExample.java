@@ -66,7 +66,7 @@ public final class FinalClassExample {  ////Making Class final so that we cannot
 	*/
 	
 	/**
-	 * To test the consequences of Shallow  and how to avoid it with Deep  for creating immutable classes
+	 * To test the consequences of Shallow  and how to avoid it with Deep for creating immutable classes
 	 * @param args
 	 */
 	public static void main(String[] args) {

@@ -3,7 +3,7 @@ package com.sourav.string.problems;
 public class LongestSubstringWithoutRepatingCharacters {
 
 	
-	// Technique : Two Pointers
+	// Technique : Window Sliding Technique
 	static int lengthOfLongestSubstring(String S) {
 
 		if (S.length() == 0)

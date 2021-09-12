@@ -9,9 +9,9 @@ public class SubarrayZeroSum {
     {
         Set< Integer > set = new HashSet<>();
         int sum = 0;
-        for (int a : arr) {
-            sum += a;
-            if (set.contains(sum) || a == 0 || sum == 0)
+        for (int val : arr) {
+            sum += val;
+            if (set.contains(sum) || val == 0 || sum == 0)
             	return true;
             set.add(sum);
         }

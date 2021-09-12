@@ -24,7 +24,7 @@ public class ReverseNodeGivenSize {
     public static Node reverse(Node node, int k) {
         //Your code here
         Node temp = node;
-        ArrayList < Integer > al = new ArrayList < > ();
+        ArrayList <Integer > al = new ArrayList<> ();
         while (temp != null) {
             al.add(temp.data);
             temp = temp.next;

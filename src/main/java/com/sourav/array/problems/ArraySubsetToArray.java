@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class ArraySubsetToArray {
-	
+
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
@@ -22,27 +22,24 @@ public class ArraySubsetToArray {
 			arr2[i] = input.nextInt();
 		}
 		String rep = isSubset(arr1, arr2, n, m);
-		System.out.println("Is a2[] is a subset of a1[]: " +rep);
+		System.out.println("Is a2[] is a subset of a1[]: " + rep);
 		// Loop through the array in reverse order
 	}
-	
-	
-	
-public static String isSubset( long a1[], long a2[], long n, long m) {
-        
-        Set<Long> set = new HashSet<Long>();
-        
-        for (int i=0; i<n; i++) 
-             set.add(a1[i]);
-             
-        for (int i=0; i<m; i++) 
-             set.add(a2[i]);
-        
-        
-        if (set.size() == n)
-          return "Yes";
-        
-     return "No";   
-    }
+
+	public static String isSubset(long a1[], long a2[], long n, long m) {
+
+		Set<Long> set = new HashSet<Long>();
+
+		for (int i = 0; i < n; i++)
+			set.add(a1[i]);
+
+		for (int i = 0; i < m; i++)
+			set.add(a2[i]);
+
+		if (set.size() == n)
+			return "Yes";
+
+		return "No";
+	}
 
 }

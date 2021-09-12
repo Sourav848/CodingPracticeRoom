@@ -19,9 +19,7 @@ class MaxContagiousSum // Kadane Algorithim
 				max_so_far = min_so_far;
 			if (min_so_far < 0)
 				min_so_far = 0;
-
 		}
-
 		return max_so_far;
 
 	}

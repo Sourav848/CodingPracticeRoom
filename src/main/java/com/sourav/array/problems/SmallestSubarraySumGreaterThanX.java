@@ -20,10 +20,9 @@ public class SmallestSubarraySumGreaterThanX {
  
             // If current sum becomes greater than x.
             while (curr_sum > x && start < n) {
+            	
                 // Update minimum length if needed
-                if (end - start < min_len)
-                    min_len = end - start;
-                //min_len = Math.min(min_len, end - start);
+                min_len = Math.min(min_len, end - start);
  
                 // remove starting elements
                 curr_sum -= arr[start++];

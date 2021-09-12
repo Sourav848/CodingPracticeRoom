@@ -1,6 +1,6 @@
 package com.sourav.java.examples.thread;
 
-public class ThreadExample {
+public class ThreadClass {
 	
 	
 	public static void main(String []args){

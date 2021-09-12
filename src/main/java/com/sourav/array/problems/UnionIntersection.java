@@ -100,9 +100,9 @@ public class UnionIntersection {
 			b[i] = input.nextInt();
 		}
 
-		System.out.println("Number of elements after union operation: " + doUnion(a, m, b, n));
+		System.out.println("Number of elements after union operation: " + doUnion(a, m, b, n)); //union means distinct element of arr1 and arr2
 
-		System.out.println("Common elements in both arrays are or Intersection is: ");
+		System.out.println("Common elements in both arrays are or Intersection is: "); // intersection means duplicates number in arr1 and arr2
 		printIntersection(a, b, m, n);
 
 	}

@@ -3,7 +3,7 @@ package com.sourav.java.examples.thread;
 public class ThreadRunnable {
 
 	public static void main(String[] args) {
-		//SampleRunnableOne obj1 = new SampleRunnableOne();
+		SampleRunnableOne obj3 = new SampleRunnableOne();
 		//SampleRunnableTwo obj2 = new SampleRunnableTwo();
 		
 		
@@ -32,6 +32,10 @@ public class ThreadRunnable {
 		} catch (Exception e) {
 		}
 		t2.start();
+		
+		//without lambda
+		Thread t3 = new Thread(obj3);
+		t3.start();
 		
 	}
 

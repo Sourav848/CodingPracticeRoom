@@ -32,7 +32,7 @@ class Car{
 		System.out.println("Max: 90Kmph");
 	   }
 	}
-	public class MultilevelInheritance extends Maruti{
+	public class MultilevelInheritance extends Maruti {
 
 	   public MultilevelInheritance()
 	   {

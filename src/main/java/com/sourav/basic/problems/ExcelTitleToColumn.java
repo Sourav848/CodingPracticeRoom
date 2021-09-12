@@ -2,8 +2,6 @@ package com.sourav.basic.problems;
 
 //Java program to return title
 //to result of excel sheet.
-import java.util.*;
-import java.lang.*;
 
 public class ExcelTitleToColumn {
 
@@ -23,5 +21,8 @@ public class ExcelTitleToColumn {
 //Driver Code
 	public static void main(String[] args) {
 		System.out.print(titleToNumber("AA"));
+		//int low = 'A' - 'B';
+	//	System.out.print("ascii = "+low);
 	}
+	
 }

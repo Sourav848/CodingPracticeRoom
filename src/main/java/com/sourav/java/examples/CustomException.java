@@ -2,7 +2,7 @@ package com.sourav.java.examples;
 
 
 class InvalidAgeException extends Exception{  
-	 InvalidAgeException(String s){  
+	 InvalidAgeException(String s) {  
 	  super(s);  
 	 }  
 	}  

@@ -13,8 +13,8 @@ public class AllSubsets {
         for(int i = 0; i < len; i++) {  
             //This loop adds the next character every iteration for the subset to form and add it to the array  
             for(int j = i; j < len; j++) {  
-                arr[temp] = str.substring(i, j+1);  
-                temp++;  
+                arr[temp++] = str.substring(i, j+1);  
+               // temp++;  
             }  
         }  
   

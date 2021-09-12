@@ -27,7 +27,6 @@ public class ReverseStringBuffer {
         System.out.println("Enter a String: ");
         s1.append(scan.nextLine());
         System.out.println("Revrse String is: "+s1.reverse());
-        
     		
 		String str = "Hello World, It's a beautiful day!";
 		System.out.println(reverseWord(str));
