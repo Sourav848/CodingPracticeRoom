@@ -5,7 +5,7 @@ public class BinaryToDecimal {
 	public static int getDecimal(int binary){  
 	    int decimal = 0;  
 	    int n = 0;  
-	    while(true){  
+	    while(true) {  
 	      if(binary == 0){  
 	        break;  
 	      } else {  

@@ -5,6 +5,7 @@ import java.util.HashMap;
 /* Java implementation of simple method to find count of
 pairs with given sum*/
 
+// Technique : Hashing
 
 class CountPairs {
 	// Iterating loop where in each iteration keep left constant and traversing from R-L

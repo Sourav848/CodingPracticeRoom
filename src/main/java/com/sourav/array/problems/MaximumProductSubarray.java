@@ -11,7 +11,7 @@ public class MaximumProductSubarray {
 	                cur = 1;
 	                prod = Math.max(prod, nums[i]);
 	            }
-	            else{
+	            else {
 	                cur *= nums[i];
 	                prod = Math.max(prod, cur);
 	            }

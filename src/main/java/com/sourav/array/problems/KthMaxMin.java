@@ -2,6 +2,8 @@ package com.sourav.array.problems;
 
 import java.util.Scanner;
 
+//companies : Lowe's
+
 /* Name of the class has to be "Main" only if the class is public. */
 class KthMaxMin {
 	public static void main(String[] args) throws java.lang.Exception {

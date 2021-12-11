@@ -53,14 +53,14 @@ public class LinkedListAddition {
 		// creating first list
         list.head1 = new Node(7);
         list.head1.next = new Node(5);
-        list.head1.next.next = new Node(9);
-        list.head1.next.next.next = new Node(4);
-        list.head1.next.next.next.next = new Node(6);
+        //list.head1.next.next = new Node(9);
+        //list.head1.next.next.next = new Node(4);
+        //list.head1.next.next.next.next = new Node(6);
         
  
         // creating seconnd list
-        list.head2 = new Node(8);
-        list.head2.next = new Node(4);
+        list.head2 = new Node(7);
+        list.head2.next = new Node(5); // ans = 411
        
  
 

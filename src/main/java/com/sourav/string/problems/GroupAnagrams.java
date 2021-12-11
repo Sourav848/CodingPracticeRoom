@@ -6,12 +6,13 @@ import java.util.HashMap;
 import java.util.List;
 
  //Technique : hashing
+ //companies : practo
 
 public class GroupAnagrams {
 
 	public static List<List<String>> Anagrams(String[] string_list) {
-		List<List<String>> ans = new ArrayList<>();
-		HashMap<String, List<String>> hash = new HashMap<>();
+		List<List<String>> ans = new ArrayList<List<String>>();
+		HashMap<String, List<String>> hash = new HashMap<String, List<String>>();
 		for (String i : string_list) {
 			char ch[] = i.toCharArray();
 			Arrays.sort(ch);

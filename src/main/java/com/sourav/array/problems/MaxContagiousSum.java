@@ -2,6 +2,8 @@ package com.sourav.array.problems;
 
 //Java program to print largest contiguous array sum
 
+//companies : BigBasket
+
 class MaxContagiousSum // Kadane Algorithim
 {
 	public static void main(String[] args) {

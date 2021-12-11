@@ -3,6 +3,7 @@ package com.sourav.array.problems;
 import java.util.*;
 
 public class CommonElements {
+	
 	static ArrayList<Integer> commonElements(int A[], int B[], int C[], int n1, int n2, int n3) {
 
 		if (n2 > n1 && n2 > n3) { // here making n1 greater among them.
@@ -23,7 +24,7 @@ public class CommonElements {
 			n3 = temp1;
 		}
 
-		ArrayList<Integer> al = new ArrayList<Integer>();
+		ArrayList<Integer> al = new ArrayList<Integer>(); //	//Arrays.binarySearch(array,element));
 		for (int i = 0; i < n1; i++) {
 			if (binarySearch(B, 0, n2 - 1, A[i]) != -1 && binarySearch(C, 0, n3 - 1, A[i]) != -1) {
 				if (!al.contains(A[i]))
@@ -93,4 +94,5 @@ public class CommonElements {
 			System.out.println();
 		}
 	}
+	
 }

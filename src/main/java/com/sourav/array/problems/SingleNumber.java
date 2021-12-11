@@ -15,7 +15,7 @@ public class SingleNumber {
 	
 	public static void main(String[] args)
     {
-        int[] a = {8, 8, 7, 7, 6, 1, 6};
+       int[] a = {8, 8, 7, 7, 6, 1, 6, 6};
       //int[] a = {1, 1, 2, 2, 2};
         System.out.println("Missing Number is: " +singleNumber(a));
     }

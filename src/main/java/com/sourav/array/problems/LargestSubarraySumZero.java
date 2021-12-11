@@ -12,8 +12,8 @@ public class LargestSubarraySumZero {
         int prefixSum = 0;
         int i = -1;
         HashMap<Integer, Integer> map = new  HashMap<Integer, Integer>();
-        
         map.put(prefixSum, i);
+        
         while (i<n-1) {
           i++;
           prefixSum += arr[i];

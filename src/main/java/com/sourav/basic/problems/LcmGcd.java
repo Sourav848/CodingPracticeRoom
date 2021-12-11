@@ -13,7 +13,7 @@ public class LcmGcd {
 		return ar;
 	}
 
-	//Euclidean algorithm .
+	//Euclidean algorithm
 	static int gcd(int a, int b) {
 		if (b == 0)
 			return a;

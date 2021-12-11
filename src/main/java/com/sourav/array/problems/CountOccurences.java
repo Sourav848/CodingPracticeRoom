@@ -41,17 +41,6 @@ public class CountOccurences {
 		System.out.println("There are "+countOccurence(arr, N, K)+ " numbers which occurs more than "+N/K+ " times.");
 		
 
-        String str = "MISS";
-        
-		Map<Character, Integer> values = new TreeMap<Character, Integer>();
-		for (int i = 0; i < str.length(); i++) {
-		    if (!values.containsKey(str.charAt(i)))
-			 values.put(str.charAt(i), 1);
-			else 
-		     values.put(str.charAt(i), values.get(str.charAt(i)) + 1);	
-		}
-		
-		System.out.println(values);
-	}
+	}      
 
 }

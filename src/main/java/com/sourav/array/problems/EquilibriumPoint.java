@@ -1,5 +1,8 @@
 package com.sourav.array.problems;
 
+
+//companies : optum
+
 public class EquilibriumPoint {
 
 	public static int equilibriumPoint(long arr[], int n) {

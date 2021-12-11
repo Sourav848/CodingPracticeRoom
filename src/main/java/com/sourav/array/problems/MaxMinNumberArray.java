@@ -2,6 +2,8 @@ package com.sourav.array.problems;
 
 import java.util.Scanner;
 
+//companies : DXC
+
 public class MaxMinNumberArray {
 	public static void main(String[] args) {  
         Scanner input = new Scanner(System.in);

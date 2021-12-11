@@ -3,6 +3,8 @@ package com.sourav.array.problems;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//companies : DXC, EPAM
+
 public class AlternatePosNegNumbers {
 	static void rearrange(int arr[], int n) {
 		ArrayList<Integer> neg = new ArrayList<Integer>();

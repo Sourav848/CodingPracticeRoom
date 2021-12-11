@@ -37,7 +37,7 @@ public class DeleteNodeWithoutHead {
 
 		DeleteNodeWithoutHead list = new DeleteNodeWithoutHead();
 		list.head = new Node(85);
-		list.head.next = new Node(15);
+		list.head.next = new Node(15); //16
 		list.head.next.next = new Node(16);
 		list.head.next.next.next = new Node(20);
 		list.head.next.next.next.next = new Node(25);

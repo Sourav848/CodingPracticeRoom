@@ -3,6 +3,9 @@ package com.sourav.linkedlist.problems;
 import java.util.ArrayList;
 import java.util.List;
 
+//companies : optum
+
+
 public class MiddleElementLinkedList {
 
 	static Node head;
@@ -49,5 +52,9 @@ public class MiddleElementLinkedList {
 		System.out.println("");
 		System.out.println("Middle Element of linked list ----> " + getMiddle(head));
 	}
+	
+	
+	/*Method 2: Traverse linked list using two pointers. Move one pointer by one and the other pointers by two. 
+		When the fast pointer reaches the end slow pointer will reach the middle of the linked list*/
 
 }

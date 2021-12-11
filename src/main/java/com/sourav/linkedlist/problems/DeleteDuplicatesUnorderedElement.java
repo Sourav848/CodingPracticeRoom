@@ -18,8 +18,8 @@ public class DeleteDuplicatesUnorderedElement {
 	}
 
 	static public Node removeDuplicates(Node head) {
+		
 		HashSet<Integer> hs = new HashSet<>();
-
 		/* Pick elements one by one */
 		Node current = head;
 		Node prev = null;

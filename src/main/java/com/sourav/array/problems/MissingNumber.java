@@ -15,14 +15,14 @@ public class MissingNumber {
 	    return n_elements_sum - sum;
     }
 	
-	public static int getMissingNumberUnsortedArray(int arr[])
-    {
-        int i, total;
-        int n = arr.length;
-        total = (n + 1) * (n + 2) / 2;
-        for (i = 0; i < n; i++)
-            total -= arr[i];
-        return total;
+	public static int getMissingNumberUnsortedArray(int arr[], int n) {
+		
+        int n_elements_sum = (n + 1) * (n + 2) / 2;
+        int sum = 0;
+        
+        for (int i = 0; i < n; i++)
+             sum  += arr[i];
+        return n_elements_sum - sum;
     }
 	
 
@@ -35,8 +35,8 @@ public class MissingNumber {
         System.out.println("Missing Number is: " +missingNumber(a, a.length));
         
         
-        int[] number = {6, 3, 2, 4, 1};
-        System.out.println("Missing Number is:" + getMissingNumberUnsortedArray(number));
+        int[] number = {6, 3, 2, 4, 1, 5, 8};
+        System.out.println("Missing Number is:" + getMissingNumberUnsortedArray(number, number.length));
     }
 
 }

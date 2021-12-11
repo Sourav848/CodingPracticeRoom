@@ -17,9 +17,20 @@ public class ATOI {
 
 		return Integer.parseInt(str);
 	}
+	
+	static int atoiother(String str) {
+		try {
+			return Integer.parseInt(str);
+
+		} catch (NumberFormatException e) {
+			return -1;
+		}
+	}
 
 	public static void main(String[] args) {
-		String str = "-12";
+		String str = "12";
 		System.out.println(atoi(str));
+		String strother = "-12a";
+		System.out.println(atoiother(strother));
 	}
 }

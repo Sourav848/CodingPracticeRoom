@@ -7,7 +7,7 @@ class RotateLeft {
 		int[] arr = new int[n];
 
 		for (int i = 0; i < n; i++) {
-			arr[(i + (n - k)) % n] = a[i];
+			arr[(i + (n - k)) % n] = a[i]; // (i+k) % n for right
 		}
 
 		return arr;

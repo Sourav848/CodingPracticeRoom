@@ -7,7 +7,7 @@ import java.util.Set;
 public class SubarrayZeroSum {
     static boolean findsum(int arr[],int n)
     {
-        Set< Integer > set = new HashSet<>();
+        Set<Integer> set = new HashSet<Integer>();
         int sum = 0;
         for (int val : arr) {
             sum += val;
