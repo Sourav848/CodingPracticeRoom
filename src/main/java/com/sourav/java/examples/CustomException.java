@@ -2,7 +2,7 @@ package com.sourav.java.examples;
 
 
 class InvalidAgeException extends Exception{  
-	 InvalidAgeException(String s) {  
+	 InvalidAgeException(String s) {  //change to int will throw error coz constructor in exception class having method
 	  super(s);  
 	 }  
 	}  
@@ -10,7 +10,7 @@ class InvalidAgeException extends Exception{
 
 public class CustomException {
 
-	static void validate(int age)throws InvalidAgeException{  //throws keyword custom exception
+	static void validate(int age) throws InvalidAgeException {  //throws keyword custom exception
 	     if(age<18)  
 	      throw new InvalidAgeException("not valid");   //throw keyword custom exception
 	     else  

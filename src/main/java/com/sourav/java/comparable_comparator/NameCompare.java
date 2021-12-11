@@ -1,8 +1,7 @@
-package com.sourav.java.examples.comparable_comparator;
+package com.sourav.java.comparable_comparator;
 
 import java.util.Comparator;
 
-import com.sourav.java.examples.CustomAnnotation.*;
 
 //Class to compare Movies by name
 class NameCompare implements Comparator<ComparatorMovie>

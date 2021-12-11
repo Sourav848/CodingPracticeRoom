@@ -4,12 +4,12 @@ public class ExceptionHandling {
 
 	static public int someMethod1(int i) {
 		try {
-			return i;
+			return i++;
 		} catch (Exception e) {
 			return i + 1;
 		} finally {
 			System.out.println("Finally Block of First Method");
-			return i+2;
+			return i+2; //4
 		}
 	}
 	
@@ -17,14 +17,13 @@ public class ExceptionHandling {
 		for (int i=1; i<=n; i++) {
 		try {
 			int c  = i/0;
-		} catch (ArrayIndexOutOfBoundsException ex) {
-			System.out.println("catch one Block");
-			} 
+		} catch (ArrayIndexOutOfBoundsException ex) { //multiple catch block
+			System.out.println("Handling index out of bond exception");  } 
 		  catch (ArithmeticException ex) { //writing try block inside catch block
 				try {
 					int c = i / 0;
 				} catch (ArithmeticException ey) {
-					System.out.println("bobo");
+					System.out.println("try inside catch");
 				}
 				System.out.println("catch two Block");
 			

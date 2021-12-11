@@ -1,4 +1,4 @@
-package com.sourav.java.examples.comparable_comparator;
+package com.sourav.java.comparable_comparator;
 
 
 //A Java program to demonstrate use of Comparable

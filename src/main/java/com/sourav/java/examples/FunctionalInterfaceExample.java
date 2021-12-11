@@ -22,6 +22,10 @@ public interface FunctionalInterfaceExample {
 	static void m4() {
 		System.out.println("static method-1");
 	}
+	
+	static void m5() {
+		System.out.println("static method-1");
+	}
 
 }
 

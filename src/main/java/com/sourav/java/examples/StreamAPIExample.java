@@ -1,7 +1,10 @@
 package com.sourav.java.examples;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.OptionalInt;
 import java.util.stream.Collectors;
 
 public class StreamAPIExample {
@@ -45,7 +48,7 @@ public class StreamAPIExample {
 		
 		List<String> listString = list3.stream().filter(str -> str.startsWith("A")).collect(Collectors.toList());
 		System.out.println(listString);
-		
+		 
 		
 		//with streamAPI map() method that takes Function and returns value
 		List<Integer> mapOperation = numbers.stream().map(j -> j*j).collect(Collectors.toList());
@@ -64,6 +67,8 @@ public class StreamAPIExample {
 			 }
 		});
 		
+		numbers.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+		
 		long count = numbers.stream().filter(number -> number == 65).count();
 		System.out.println("Total count of list is "+count);
 		
@@ -71,6 +76,38 @@ public class StreamAPIExample {
 		//unique number
 		List<Integer> distinctElements =  numbers.stream().distinct().collect(Collectors.toList());
 		System.out.println("unique number is "+ distinctElements);
-	}
+		
+		//method reference
+		numbers.stream().forEach(System.out::println);
+		
+		//List to Map
+		
+		List<Integer> listToMap = new ArrayList<Integer>();
+		
+		listToMap.add(1);
+		listToMap.add(2);
+		listToMap.add(65);
+		listToMap.add(41);
+		listToMap.add(50);
+		listToMap.add(16);
+		
+		Map<Integer, Integer> map = listToMap.stream().collect(Collectors.toMap(s -> s++, s -> 0));
+		
+		for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			
+			System.out.print(entry.getKey()+"="+entry.getKey()+", ");
+		}
+		
+		//sum
+		int sum = numbers.stream().mapToInt(Integer::intValue).sum();
+         System.out.println("sum of list is = "+ sum);
+         
+         
+         //max
+         OptionalInt max = numbers.stream().mapToInt(Integer::intValue).max();
 
+          if(max.isPresent())
+           System.out.println("Maximum number in List: "+max.getAsInt());
+	}
+	
 }

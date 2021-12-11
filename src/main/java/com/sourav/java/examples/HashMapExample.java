@@ -49,6 +49,11 @@ public class HashMapExample {
         hm.put("Java", 95);
         hm.put("Operating System", 79);
         hm.put("Networking", 80);
+        hm.put("", 8088);
+        hm.put(" ", 980);
+        
+        String st = "";
+        System.out.println("hashcode calculation = " +st.hashCode());
 		
         Map<String, Integer> sortByValueMap = hm.entrySet().stream().sorted(Entry.comparingByValue())
 				.collect(Collectors.toMap(entry -> entry.getKey(), entry -> entry.getValue(),

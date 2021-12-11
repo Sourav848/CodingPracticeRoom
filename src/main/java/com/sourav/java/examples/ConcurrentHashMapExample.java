@@ -28,7 +28,7 @@ public class ConcurrentHashMapExample {
 
 		// create another concurrentHashMap
 		ConcurrentHashMap<String, String> new_chm
-			= new ConcurrentHashMap<>();
+			= new ConcurrentHashMap<String, String>();
 
 		// copy mappings from my_cmmap to new_chm
 		new_chm.putAll(my_cmmap);

@@ -29,13 +29,13 @@ public final class FinalClassExample {  ////Making Class final so that we cannot
 	}
 
 	/**
-	 * Constructor performing Deep 
+	 * Constructor performing Deep Copy
 	 * @param i
 	 * @param n
 	 * @param hm
 	 */
 	
-	public FinalClassExample(int i, String n, HashMap<String,String> hm){
+	public FinalClassExample(int i, String n, HashMap<String,String> hm) {
 		System.out.println("Performing Deep for Object initialization");
 		this.id=i;
 		this.name=n;
@@ -58,7 +58,7 @@ public final class FinalClassExample {  ////Making Class final so that we cannot
 	 */
 	/**
 	public FinalClassExample(int i, String n, HashMap<String,String> hm){
-		System.out.println("Performing Shallow  for Object initialization");
+		System.out.println("Performing Shallow for Object initialization");
 		this.id=i;
 		this.name=n;
 		this.testMap=hm;
@@ -66,7 +66,7 @@ public final class FinalClassExample {  ////Making Class final so that we cannot
 	*/
 	
 	/**
-	 * To test the consequences of Shallow  and how to avoid it with Deep for creating immutable classes
+	 * To test the consequences of Shallow and how to avoid it with Deep for creating immutable classes
 	 * @param args
 	 */
 	public static void main(String[] args) {

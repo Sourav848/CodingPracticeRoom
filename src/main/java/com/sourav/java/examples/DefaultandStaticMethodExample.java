@@ -4,7 +4,7 @@ package com.sourav.java.examples;
 interface TestInterface1 {
 	
 	// Default method are only allowed in interfaces not in class
-	default void show()
+	 default void show()
     {
       System.out.println("Default TestInterface1");
     }
@@ -31,14 +31,15 @@ public class DefaultandStaticMethodExample implements TestInterface1, TestInterf
 	
 	public void show() {
 		 
-		 TestInterface1.super.show();
+		 TestInterface1.super.show(); //avoid multiple inheritance, programmer calling explicitly which method.
 		 
 		 TestInterface2.super.show();
 		 
 	 }
 	
+	
 	 // Class Static method is defined
-    static void hello()
+    static void classHello()
     {
         System.out.println("Called from Class");
     }
@@ -50,11 +51,10 @@ public class DefaultandStaticMethodExample implements TestInterface1, TestInterf
 	        // name is preceding with method
 		
 		 TestInterface1.hello(); 
-		 defaultandStaticMethodExample.show();
 		 
 		 defaultandStaticMethodExample.show(); // It is not mandatory to override default methods but here i am overriding.
 		 
 	        // Call Class static method
-	        hello();
+		 classHello();
 	    }
 }

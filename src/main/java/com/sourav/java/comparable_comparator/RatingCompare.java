@@ -1,4 +1,4 @@
-package com.sourav.java.examples.comparable_comparator;
+package com.sourav.java.comparable_comparator;
 
 import java.util.Comparator;
 

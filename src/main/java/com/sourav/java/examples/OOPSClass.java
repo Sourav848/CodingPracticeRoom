@@ -90,7 +90,7 @@ class OOPSClass {
 
 		System.out.println(b.add(4, 2));
 
-		System.out.println(b.add(5., 2.)); // polymorphism
+		System.out.println(b.add(5.5, 2.5)); // polymorphism
 
 		EncapTest encap = new EncapTest();
 
