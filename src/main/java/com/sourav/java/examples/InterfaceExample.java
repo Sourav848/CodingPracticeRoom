@@ -30,6 +30,7 @@ class InterfaceExample implements InterfaceSample {
 
 		// Calling the abstract method of interface
 		interfaceDemo.overrideMethod("Hello, Override Method here");
+		System.out.println(StaticKeywordExample.str);
 
 	}
 

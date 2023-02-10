@@ -9,12 +9,15 @@ public class SubarrayZeroSum {
     {
         Set<Integer> set = new HashSet<Integer>();
         int sum = 0;
+        int cnt=0;
         for (int val : arr) {
             sum += val;
             if (set.contains(sum) || val == 0 || sum == 0)
-            	return true;
-            set.add(sum);
+            	cnt++;
+            else 
+              set.add(sum);
         }
+        System.out.println(cnt);
         return false;
     }
 	

@@ -30,13 +30,13 @@ public class CountOccurences {
 	
 	public static void main(String[] arg) { 
 		
-		int N = 8;
-		int arr[] = {3,1,2,2,1,2,3,3};
-		int K = 4;
-		
-		//int N = 6;
-		//int arr[] = {1, 2, 2, 2, 3, 3};
-		//int K = 3;
+//		int N = 8;
+//		int arr[] = {3,1,2,2,1,2,3,3};
+//		int K = 4;
+//		
+		int N = 6;
+		int arr[] = {1, 2, 2, 2, 3, 3};
+		int K = 3;
 		
 		System.out.println("There are "+countOccurence(arr, N, K)+ " numbers which occurs more than "+N/K+ " times.");
 		

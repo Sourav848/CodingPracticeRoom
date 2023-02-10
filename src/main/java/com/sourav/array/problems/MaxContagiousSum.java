@@ -7,8 +7,8 @@ package com.sourav.array.problems;
 class MaxContagiousSum // Kadane Algorithim
 {
 	public static void main(String[] args) {
-		// int [] a = {-2, -3, 4, -1, -2, 1, 5, -3};
-		int a[] = {-5, 1, 2, -3, 4 };
+		 int [] a = {-2, -3, 4, -1, -2, 1, 5, -3};
+		//int a[] = {-5, 1, 2, -3, 4 };
 		System.out.println("Maximum contiguous sum is " + maxSubarraySum(a, a.length));
 	}
 

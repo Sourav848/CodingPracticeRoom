@@ -7,7 +7,7 @@ public class SingleNumber {
 	public static int singleNumber(int[] nums) {
 	    int a = 0;
 	    for (int i : nums) {
-	      a ^= i;
+	      a ^= i; //two identical number will be zero
 	    }
 	    return a;
 	  }

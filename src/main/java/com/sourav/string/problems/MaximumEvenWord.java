@@ -1,6 +1,6 @@
 package com.sourav.string.problems;
 
-public class MaximumEvenWord {
+ class MaximumEvenWord {
 
 	public static void main(String args[]) {
 

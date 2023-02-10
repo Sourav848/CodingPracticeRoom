@@ -29,7 +29,7 @@ public class EquilibriumPoint {
 
 	public static void main(String[] args) {
 
-		//long[] arr = { 1, 2, 3, 4, 5 };
+	//	long[] arr = { 1, 2, 3, 4, 5 };
 		long arr[] = {1,3,5,2,2};
 
 		System.out.println(equilibriumPoint(arr, arr.length));

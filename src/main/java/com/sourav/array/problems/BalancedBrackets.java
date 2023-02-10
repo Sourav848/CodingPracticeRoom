@@ -6,7 +6,6 @@ import java.util.*;
 
 //company : amdocs
 
-
 public class BalancedBrackets {
 
 	// function to check if brackets are balanced

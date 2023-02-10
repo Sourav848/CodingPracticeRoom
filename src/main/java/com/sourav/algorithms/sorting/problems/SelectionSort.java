@@ -16,7 +16,7 @@ public class SelectionSort {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter no. of elements you want in array:");
 		int n = input.nextInt();
-		int arr[] = new int[n];
+		int[] arr = new int[n];
 		for (int i = 0; i < n; i++) {
 			arr[i] = input.nextInt();
 		}		
@@ -32,10 +32,10 @@ public class SelectionSort {
 			}
 	}
 
-	static int selection_sort(int a[], int k, int n) {
-		int locIndex = k,
-			min = a[k];
-			for (int j = k; j < n; j++) {
+	static int selection_sort(int a[], int index, int n) {
+		int locIndex = index,
+			min = a[index];
+			for (int j = index; j < n; j++) {
 				if (a[j] < min) {
 					min = a[j];
 					locIndex = j;

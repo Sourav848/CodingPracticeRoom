@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class RemoveDuplicateInArray {
 	
-	//Technique 1
+	//Technique 1 TC = 0(n) // SC = 0(1)
 	public static int removeDuplicateElements(int arr[], int n){  
         if (n==0 || n==1){  
             return n;  

@@ -2,7 +2,7 @@ package com.sourav.java.examples;
 
 public class StaticKeywordExample {
 
-	private static String str = "BeginnersBook";
+   static String str = "BeginnersBook";
     String str1 = "hello";
     
     StaticKeywordExample() { // cannot make constructor static or final
