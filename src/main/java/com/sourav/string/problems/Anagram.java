@@ -25,7 +25,7 @@ public class Anagram {
             Arrays.sort(string2);  
   
             //Comparing both the arrays using in-built function equals ()  
-            if(Arrays.equals(string1, string2) == true) {  
+            if(Arrays.equals(string1, string2)) {  
                 System.out.println("Both the strings are anagram");  
             }  
             else {  

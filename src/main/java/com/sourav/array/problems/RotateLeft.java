@@ -1,5 +1,10 @@
 package com.sourav.array.problems;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 class RotateLeft {
 
 	static int[] rotLeft(int[] a, int k) {
@@ -12,6 +17,57 @@ class RotateLeft {
 
 		return arr;
 	}
+	
+	 static void rotateArrLeft(int arr[], int d, int n)
+	    {
+	     
+	     Queue<Integer> q=new LinkedList<>();
+
+	        for(int i=0;i<n;i++)
+
+	            q.add(arr[i]);
+
+	         for(int i=0;i<d;i++)
+
+	            q.add(q.poll());
+
+	        for(int i=0;i<n;i++)
+
+	           arr[i]=q.poll();
+	        
+	        for (int i = 0; i < arr.length; i++) {
+	            System.out.print(arr[i] + " ");
+	        }
+
+	 
+	    }
+	 
+	 
+	   static void rotateArrRight(int arr[], int d, int n)
+       {
+        
+        Deque<Integer> q=new ArrayDeque<>();
+
+           for(int i=0;i<n;i++)
+
+               q.add(arr[i]);
+
+            for(int i=0;i<d;i++)
+
+               q.offerFirst(q.pollLast());
+
+           for(int i=0;i<n;i++)
+
+              arr[i]=q.pop();
+           
+           for (int i = 0; i < arr.length; i++) {
+               System.out.print(arr[i] + "wo   ");
+           }
+
+    
+       }
+	 
+	
 
 	public static void main(String[] args) {
 		// Initialize array
@@ -22,6 +78,11 @@ class RotateLeft {
 		int n1 = 2;
 
 		rotLeft(arr1, n1);
+		
+		rotateArrLeft(arr1, n1, arr1.length);
+		
+		rotateArrRight(arr, n1, arr.length);
+		
 		// Displays original array
 		System.out.println("Original array: ");
 		for (int i = 0; i < arr.length; i++) {

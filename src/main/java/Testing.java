@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Testing {
     public static void main(String args[]) {
@@ -15,7 +17,17 @@ public class Testing {
      // System.out.print(" " +pivotIndex(nums));
       
       int[] A = {100,180,260,310,40,535,695};
-      stockBuySell(A, A.length);
+     // stockBuySell(A, A.length);
+      
+      
+      int[] keys = { 83315, 22089, 19068, 64911, 67636, 4640, 80192, 98971 };
+      
+      List al = Arrays.asList(keys);
+      
+      int ct=9677958;
+      int sp=50058356;
+    //  List<Integer> list = encryptionValidity(ct, sp, al);
+      
       
     }
     
@@ -92,6 +104,47 @@ public class Testing {
             System.out.println();
         }
     }
+    
+    public static List<Integer> encryptionValidity(int instructionCount, int validityPeriod, List<Integer> keys) {
+        // Write your code here
+        
+        List<Integer> list = new ArrayList<Integer>();
+        
+        int maxDegree = Integer.MIN_VALUE;
+        for (int i=0; i<keys.size(); i++){
+         int count = 0;
+            for (int j=0; j<keys.size(); j++){
+            if (keys.get(i) % keys.get(j) == 0) {
+                count++;
+                 maxDegree = Math.max(count, maxDegree);
+                
+            }  
+          }
+        }
+        
+        
+        int NumOfKeys = maxDegree * (int)Math.pow(10, 5);
+        int totalProcessing = instructionCount * validityPeriod;
+        
+        if (totalProcessing >=  NumOfKeys){
+            list.add(1);
+            list.add(NumOfKeys);
+        } else {
+            list.add(0);
+            list.add(NumOfKeys);
+            
+        }
+
+     return list;
+        }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }

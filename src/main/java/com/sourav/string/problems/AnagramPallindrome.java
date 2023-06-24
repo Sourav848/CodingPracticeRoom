@@ -34,7 +34,7 @@ public class AnagramPallindrome {
 
 	public static void main(String args[]) {
 
-		  String str = "madam"; //Explanation: The string can be converted into a palindrome: madam
+		  String str = "maadm"; //Explanation: The string can be converted into a palindrome: maadm can be madam and madam is pallindrom
 		//String str = "nose"; //Explanation: The string cannot be converted into a palindrome.
 		if (isPossible(str) == 1)
 			System.out.println("YES");

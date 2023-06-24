@@ -3,12 +3,12 @@ package com.sourav.algorithms.sorting.problems;
 import java.util.*;
 
 //In this algorithm, we insert each element onto its proper place in the sorted array. 
-//Expected Time Complexity: O(NlogN).
+//Best Time Complexity: O(N) // Worst/average: O(n2).
 
 
 public class InsertionSort {
 	
-	static void insertion_sort(int a[], int n) {
+	static void insertionSort(int[] a, int n) {
 		for (int i = 1; i < n; i++) {
 			int temp = a[i];
 			int j = i - 1;
@@ -16,10 +16,9 @@ public class InsertionSort {
 				a[j + 1] = a[j];
 				j = j - 1;
 			}
-			a[j + 1] = temp;
+			a[j + 1] = temp; 
 		}
 	}
-
 	public static void main(String[] args) {
 
 		@SuppressWarnings("resource")
@@ -30,7 +29,7 @@ public class InsertionSort {
 		for (int i = 0; i < n; i++) {
 			arr[i] = input.nextInt();
 		}
-		insertion_sort(arr, n);
+		insertionSort(arr, n);
 		System.out.println("Printing Sorted List ...");
 		for (int i = 0; i < n; i++) {
 			System.out.print(" " + arr[i]);

@@ -19,6 +19,7 @@ public class MissingNumber {
 	public static void main(String[] args)
     {  
         int[] number = {6, 3, 2, 4, 1, 5, 8};
+        //int[] number = {2, 2};
         System.out.println("Missing Number is:" + getMissingNumberUnsortedArray(number, number.length));
     }
 
