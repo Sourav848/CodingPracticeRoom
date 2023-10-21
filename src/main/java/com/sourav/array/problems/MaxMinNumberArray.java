@@ -18,7 +18,7 @@ public class MaxMinNumberArray {
         for (int i = 0; i < n; i++) {  
         	if(arr[i] > max)
         		max = arr[i];
-        	else
+        	else if(arr[i] < min)
         		min = arr[i];
         }
         System.out.println("maximum number in array is: "+max+" minimum number in array is: "+min); 

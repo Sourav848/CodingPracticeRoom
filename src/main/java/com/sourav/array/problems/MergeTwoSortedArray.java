@@ -54,6 +54,7 @@ public class MergeTwoSortedArray {
 				arr1[i] = arr3[i];
 			else
 				arr2[j++] = arr3[i];
+		
 
 	}
 }

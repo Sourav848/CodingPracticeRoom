@@ -24,7 +24,6 @@ class Producer implements Runnable {
         this.SIZE = size;
     }
 
-    @Override
     public void run() {
         for (int i = 0; i < 7; i++) {
             System.out.println("Produced: " + i);

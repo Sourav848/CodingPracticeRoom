@@ -33,10 +33,10 @@ public class StreamAPIExample {
 		
 		
 		//with streamAPI filter() method that takes Predicate and returns boolean
-		List<Integer> evenList = numbers.stream().filter(j -> j%2 == 0).collect(Collectors.toList());
+		List<Object> evenList = numbers.stream().filter(j -> j%2 == 0).collect(Collectors.toList());
 		System.out.println(evenList);
 		
-		List<Integer> greaterthanten = numbers.stream().filter(j -> j>10).collect(Collectors.toList());
+		List<Object> greaterthanten = numbers.stream().filter(j -> j>10).collect(Collectors.toList());
 		System.out.println(greaterthanten);
 		
 		List<String> list3 = new ArrayList<String>();

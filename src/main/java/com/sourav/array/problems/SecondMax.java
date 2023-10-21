@@ -33,7 +33,7 @@ public class SecondMax {
 			 * is checking if array have two max same number to avoid to store in max in
 			 * second
 			 */
-			else if (arr[i] > second && arr[i] != first)
+			else if (arr[i] > second && arr[i] < first)
 				second = arr[i];
 		}
 
@@ -79,7 +79,7 @@ public class SecondMax {
 
 	/* Driver program to test above function */
 	public static void main(String[] args) {
-		int arr[] = { 12, 35, 1, 10, 34, 1 };
+		int arr[] = { 12, 12, 35, 1, 10, 34, 1 };
 		int n = arr.length;
 		print2largest(arr, n);
 		thirdLargest(arr, n);

@@ -49,6 +49,7 @@ class SubClass extends SuperClass {
 		return "different retutn types";
 	}
 	
+	// @Override - if we use then it will throw comip
 	public static void staticMethod(){
 		System.out.println("Static Method cannot be overriden in subclass but also won't give compiler error.");
 	}

@@ -15,12 +15,13 @@ public class EquilibriumPoint {
 			rightsum += arr[i];
 
 		for (int i = 0; i < n; i++) {
-			rightsum -= arr[i]; // rightsum is now right rightsum for index i
+		    leftsum += arr[i];
+			 // rightsum is now right rightsum for index i
 
 			if (leftsum == rightsum)
 				return i;
 
-			leftsum += arr[i];
+			rightsum -= arr[i];
 		}
 
 		/* If no equilibrium index found, then return 0 */

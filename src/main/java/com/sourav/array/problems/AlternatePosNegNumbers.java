@@ -7,13 +7,13 @@ import java.util.Scanner;
 
 public class AlternatePosNegNumbers {
 	static void rearrange(int arr[], int n) {
-		ArrayList<Integer> neg = new ArrayList<Integer>();
-		ArrayList<Integer> pos = new ArrayList<Integer>();
+		ArrayList<Integer> neg = new ArrayList<>();
+		ArrayList<Integer> pos = new ArrayList<>();
 
 		for (int i = 0; i < n; i++) {
 
 			if (arr[i] < 0)
-				neg.add(arr[i]);
+				neg.add(arr[i]);      
 			else
 				pos.add(arr[i]);
 		}
