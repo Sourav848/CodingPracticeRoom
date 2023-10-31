@@ -34,11 +34,11 @@ public class SubarraySumNumber {
 		//int arr[] = { 10, 2, -2, -20, 10 };
 		//int sum = 10;
 
-	   // int arr[] = { 3, 3, 5, 12, -6 };
-		//int sum = 6;
+	   int arr[] = { 3, 3, 5, 12, -6 };
+	   int sum = 6;
 		
-		int arr[] = { 1, 2, 3, 4, 5 };
-		int sum = 8;
+	//	int arr[] = { 1, 2, 3, 4, 5 };
+	//	int sum = 8;
 		int n = arr.length;
 		System.out.println(findSubarraySum(arr, n, sum));
 	}

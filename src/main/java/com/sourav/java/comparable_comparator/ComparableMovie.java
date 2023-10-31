@@ -31,6 +31,14 @@ class ComparableMovie implements Comparable<ComparableMovie>
 		{
 			return this.year - m.year;
 		}
+		
+		//for sorting on strings
+		/*
+		 * public int compareTo(ComparableMovie m) 
+		 * { 
+		 * return this.name.compareTo(m.name);
+		 * }
+		 */
 
 
 //Driver class

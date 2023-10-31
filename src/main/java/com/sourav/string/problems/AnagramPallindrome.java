@@ -12,7 +12,7 @@ public class AnagramPallindrome {
 		
 		Map<Character, Integer> map = new HashMap<Character, Integer>();
 
-		// occurance
+		// Occurrence
 		for (int i = 0; i < s.length(); i++) {
 			if (map.containsKey(s.charAt(i)))
 				map.put(s.charAt(i), map.get(s.charAt(i)) + 1);
@@ -20,7 +20,7 @@ public class AnagramPallindrome {
 				map.put(s.charAt(i), 1);
 		}
         
-		//checking for odd number in occurance of letter
+		//checking for odd number in occurrence of letter
 		int count = 0;
 		for (Map.Entry<Character, Integer> m : map.entrySet()) {
 			if (m.getValue() % 2 > 0)
