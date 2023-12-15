@@ -14,6 +14,6 @@ public class OptionalClass {
 
 	public static void main(String[] args) {
 
-		System.out.println(changeCase("SOURAV"));
+		System.out.println(changeCase(null));
 	}
 }

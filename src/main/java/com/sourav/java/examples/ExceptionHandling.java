@@ -18,8 +18,8 @@ public class ExceptionHandling {
 		try {
 			int c  = i/0;
 		} catch (ArrayIndexOutOfBoundsException ex) { //multiple catch block
-			System.out.println("Handling index out of bond exception");  } 
-		  catch (ArithmeticException ex) { //writing try block inside catch block
+			System.out.println("Handling index out of bond exception"); 
+		} catch (RuntimeException ex) { //writing try block inside catch block
 				try {
 					int c = i / 0;
 				} catch (ArithmeticException ey) {
@@ -39,7 +39,7 @@ public class ExceptionHandling {
 		try {
 			return i;
 		} finally {
-			System.out.println("Finally Block of First Method");
+			System.out.println("Finally Block of third Method");
 		}
 	}
 	
@@ -49,5 +49,7 @@ public class ExceptionHandling {
 		System.out.println(someMethod1(1));
 		System.out.println();
 		someMethod2(3);
+		System.out.println();
+		someMethod3(3);
 	}
 }
