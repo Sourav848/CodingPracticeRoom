@@ -1,8 +1,10 @@
 package com.sourav.pojo;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Employee {
-	
+
 	int empId;
 	String name;
 	int deptId;
@@ -10,7 +12,22 @@ public class Employee {
 	String gender;
 	int age;
 	int salary;
-	
+	int yearOfJoining;
+	List<String> femaleFriends=new ArrayList<String>();
+
+	public Employee(int empId, String name, String gender, int age, int deptId, String departmentName, int salary,
+			int yearOfJoining) {
+		super();
+		this.empId = empId;
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+		this.deptId = deptId;
+		this.departmentName = departmentName;
+		this.salary = salary;
+		this.yearOfJoining = yearOfJoining;
+	}
+
 	public String getGender() {
 		return gender;
 	}
@@ -23,24 +40,8 @@ public class Employee {
 		return age;
 	}
 
-	public Employee(int empId, String name, String gender, int age) {
-		this.empId = empId;
-		this.name = name;
-		this.gender = gender;
-		this.age = age;
-	}
-
 	public void setAge(int age) {
 		this.age = age;
-	}
-
-	public Employee(int empId, String name, int deptId, String departmentName, int salary) {
-		super();
-		this.empId = empId;
-		this.name = name;
-		this.deptId = deptId;
-		this.departmentName = departmentName;
-		this.salary = salary;
 	}
 
 	public String getDepartmentName() {
@@ -51,35 +52,26 @@ public class Employee {
 		this.departmentName = departmentName;
 	}
 
-	public Employee(int i, String string, int j) {
-		// TODO Auto-generated constructor stub
-		empId=i;
-		name=string;
-		deptId=j;
-	}
-	
-	public Employee() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public Employee get() {
-		return  new Employee();
-	}
 	public int getEmpId() {
 		return empId;
 	}
+
 	public void setEmpId(int empId) {
 		this.empId = empId;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public int getDeptId() {
 		return deptId;
 	}
+
 	public void setDeptId(int deptId) {
 		this.deptId = deptId;
 	}
@@ -91,7 +83,21 @@ public class Employee {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	
-	
+
+	public int getYearOfJoining() {
+		return yearOfJoining;
+	}
+
+	public void setYearOfJoining(int yearOfJoining) {
+		this.yearOfJoining = yearOfJoining;
+	}
+
+	public List<String> getFemaleFriends() {
+		return femaleFriends;
+	}
+
+	public void setFemaleFriends(List<String> femaleFriends) {
+		this.femaleFriends = femaleFriends;
+	}
 
 }

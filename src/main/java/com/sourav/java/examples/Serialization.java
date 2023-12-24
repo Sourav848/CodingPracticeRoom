@@ -40,7 +40,7 @@ public class Serialization {
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(person);
         oos.close();
-        fos.close();
+        fos.close(); 
     }
     
 

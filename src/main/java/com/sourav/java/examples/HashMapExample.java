@@ -61,5 +61,15 @@ public class HashMapExample {
 
 		
         System.out.println("Sort by value in map "+sortByValueMap);
+        
+        final Map<String, Integer> mutableMap = new HashMap<>(); //means you can't declare new instance of map but still modify the key, value.
+        mutableMap.put("key1", 10); // This is allowed, modifies existing value
+        mutableMap.put("key2", 20); // This is also allowed, adds new key-value pair
+        
+        
+        final Map<String, String> immmutableMap = Collections.singletonMap("key1", "value1");
+        //map.immmutableMap("key2", "value2"); // This will trigger a compile-time error as the map is immutable
+        
+        
 	}
 }

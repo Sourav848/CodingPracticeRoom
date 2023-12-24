@@ -3,7 +3,7 @@ package com.sourav.java.examples.thread;
 
 
 public class DeadLock {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		final String resource1 = "ratan jaiswal";
 		final String resource2 = "vimal jaiswal";
@@ -35,6 +35,7 @@ public class DeadLock {
 		};
 
 		t1.start();
+//		t1.join(); - to avoid deadlock
 		t2.start();
 		
 		//Solution : in t2 of synchronized block pass same as t1. i.e. 1st - resource1, 2nd - resource2

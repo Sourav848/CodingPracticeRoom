@@ -14,6 +14,11 @@ public class OptionalClass {
 
 	public static void main(String[] args) {
 
+		System.out.println(changeCase("KA"));
+		System.out.println(changeCase("AkA").get());
 		System.out.println(changeCase(null));
+		System.out.println(changeCase("KA").isEmpty());
+		System.out.println(changeCase("KA").isPresent());
+		
 	}
 }

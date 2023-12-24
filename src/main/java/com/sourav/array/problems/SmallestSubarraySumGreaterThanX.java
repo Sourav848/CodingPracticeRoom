@@ -19,7 +19,7 @@ public class SmallestSubarraySumGreaterThanX {
                 curr_sum += arr[end++];
  
             // If current sum becomes greater than x.
-            while (curr_sum > x && start < n) {
+            while (curr_sum >= x && start < n) {
             	
                 // Update minimum length if needed
                 min_len = Math.min(min_len, end - start);
@@ -33,10 +33,12 @@ public class SmallestSubarraySumGreaterThanX {
 	
 	public static void main(String[] args) {
 
-		int arr[] = {1, 4, 45, 6, 0, 19};
-		int x  =  51;
+		///int arr[] = {1, 4, 45, 6, 0, 19};
+		//int x  =  51;
 		//int arr[] = {6, 3, 4, 5, 4, 3, 7, 9};
 		//int x  =  16;
+		int[] arr = {2,3,1,1,1,1,1};
+		int x=5;
 		int n = arr.length;
 		System.out.println(smallestSubWithSum(arr, n, x));
 	}

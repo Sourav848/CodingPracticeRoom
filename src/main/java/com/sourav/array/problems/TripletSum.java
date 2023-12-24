@@ -30,27 +30,6 @@ public class TripletSum {
 		return false;
 	}
 	
-	   static int findSubarraySum(int arr[], int n, int sum) {
-	        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-
-	        int res = 0;
-	        int prefixsum = 0;
-	        int minLength = 0;
-
-	        for (int i = 0; i < n; i++) {
-	            prefixsum += arr[i];
-	            if (prefixsum == sum)
-	                minLength = Math.max(minLength, i);
-	            if (map.containsKey(prefixsum - sum))
-	                minLength = Math.max(minLength, i);
-	            Integer count = map.get(prefixsum);
-	            if (count == null)
-	                map.put(prefixsum, 1);
-	            else
-	                map.put(prefixsum, count + 1);
-	        }
-	        return res;
-	    }
 
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")

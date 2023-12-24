@@ -30,6 +30,8 @@ class ComparableMovie implements Comparable<ComparableMovie>
 		public int compareTo(ComparableMovie m)
 		{
 			return this.year - m.year;
+			//for descending
+			//return m.year - this.year;
 		}
 		
 		//for sorting on strings

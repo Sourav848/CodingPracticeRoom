@@ -10,7 +10,7 @@ public class AnagramPallindrome {
 	
 	static int isPossible(String s) { 
 		
-		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		Map<Character, Integer> map = new HashMap<>();
 
 		// Occurrence
 		for (int i = 0; i < s.length(); i++) {
@@ -23,7 +23,7 @@ public class AnagramPallindrome {
 		//checking for odd number in occurrence of letter
 		int count = 0;
 		for (Map.Entry<Character, Integer> m : map.entrySet()) {
-			if (m.getValue() % 2 > 0)
+			if (m.getValue() % 2 != 0)
 				count++;
 		}
 		if (count > 1)
