@@ -32,7 +32,7 @@ public class DetectLoop {
 		head = new_node;
 	}
 
-	// Returns true if there is a loop in linked              Floyd detection algorithm
+	// Returns true if there is a loop in linked Floyd detection algorithm
 	// list else returns false.
 	static boolean detectLoop(Node h)
 	{

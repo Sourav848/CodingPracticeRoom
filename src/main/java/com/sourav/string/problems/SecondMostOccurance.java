@@ -1,7 +1,9 @@
 package com.sourav.string.problems;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class SecondMostOccurance {
 	
@@ -44,6 +46,14 @@ public class SecondMostOccurance {
 	    String	arr[] = {"aaa", "bbb", "ccc", "bbb", "aaa", "aaa"};
 	    
 	    System.out.println("Second Most frequent string is : "+secFrequent(arr, N));
+	    
+		/* Java8 approach
+		 * Map<String, Long> map =
+		 * Arrays.asList(arr).stream().collect(Collectors.groupingBy(i->i,
+		 * Collectors.counting())); System.out.println("Second approach :"+
+		 * map.entrySet().stream().sorted(Map.Entry.comparingByValue()).skip(1).
+		 * findFirst().get().getKey());
+		 */
 	}
 
 }

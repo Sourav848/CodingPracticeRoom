@@ -29,7 +29,8 @@ interface TestInterface2 {
 
 public class DefaultandStaticMethodExample implements TestInterface1, TestInterface2 {
 	
-	public void show() {
+	@Override
+	public void show() { //no need to write default keyword to override default method
 		 
 		 TestInterface1.super.show(); //avoid multiple inheritance, programmer calling explicitly which method.
 		 

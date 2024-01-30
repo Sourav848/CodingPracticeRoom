@@ -9,7 +9,11 @@ package com.sourav.java.examples;
  * @author w3spoint
  */
  
-class SuperClass{
+class Parent{
+	
+	public Parent() {
+		System.out.println("Super Class Constructor");
+	}
 	public void display(){
 		System.out.println("Super class.");
 	}
@@ -22,26 +26,36 @@ class SuperClass{
 		System.out.println("Static Method cannot be overriden but also won't give compiler error.");
 	}
 	
-	public SuperClass covariantExampleOne(){
+	private void privateMethod(){
+		System.out.println("Private Method in Parent class");
+	}
+	
+	public Parent covariantExampleOne(){
 		System.out.println("Sample of covariant return types.");
-		return new SuperClass();
+		return new Parent();
 	}
 	
 	public Object covariantExampleTwo(){
 		System.out.println("Sample of covariant return type is parent");
 		return null;
 	}
+	
 }
  
-class SubClass extends SuperClass {
+class Child extends Parent {
+	public Child() {
+		System.out.println("SubClass Class Constructor");
+	//	super(); - Will throw syntax error >> Constructor call must be the first statement in a constructor
+	}
 	//Compile time error here.
 	public void display() throws ArithmeticException { // throws IOException = checked exception == will throw error
 		System.out.println("Sub class.");
+		super.display();
 	}
 	
-	public SubClass covariantExampleOne(){
+	public Child covariantExampleOne(){
 		System.out.println("Changing return type in method overriding with the help of covariant types.");
-		return new SubClass();
+		return new Child();
 	}
 	
 	public String covariantExampleTwo(){
@@ -49,9 +63,13 @@ class SubClass extends SuperClass {
 		return "different retutn types";
 	}
 	
-	// @Override - if we use then it will throw comip
+	// @Override - if we use then it will throw CTE
 	public static void staticMethod(){
 		System.out.println("Static Method cannot be overriden in subclass but also won't give compiler error.");
+	}
+	
+	public void m3() { // throws IOException = checked exception == will throw error
+		System.out.println("Sub class.");
 	}
 	
 	
@@ -59,13 +77,19 @@ class SubClass extends SuperClass {
 public class OverridingDemo {
 	public static void main(String args[]){
 		//Creating subclass object.
-		SuperClass obj = new SubClass();
+		Parent parent = new Child();
  
 		//method call.
-		obj.display();
-		obj.covariantExampleOne();
-		obj.covariantExampleTwo();
-		obj.staticMethod();
+		parent.display();
+		parent.covariantExampleOne();
+		parent.covariantExampleTwo();
+		parent.staticMethod();
+	//	subClass.m3(); - It throws compilation error because it's not present in parent class and also upcasting scenario
+		
+		Child child = new Child();//Downcasting is not supported
+		child.m3(); //will work no upcasting is involved
+		child.finalMethod();// final method can be inherit but not override
+	//	child.privateMethod(); // private cannot be inherit and override it.
 		
 	}
 }

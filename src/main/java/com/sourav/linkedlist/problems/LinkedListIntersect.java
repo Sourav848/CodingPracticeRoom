@@ -34,7 +34,7 @@ class LinkedListIntersect {
 				n1 = n1.next;
 			}
 			while (n2 != null) {
-				if (hs.contains(n2)) {
+				if (hs.contains(n2)) { //if reference of node is found(indicating intersection)
 					return n2;
 				}
 				n2 = n2.next;

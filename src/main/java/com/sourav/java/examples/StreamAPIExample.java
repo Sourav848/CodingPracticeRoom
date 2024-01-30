@@ -25,6 +25,7 @@ public class StreamAPIExample {
 		numbers.add(65);
 		numbers.add(41);
 		numbers.add(50);
+		numbers.add(20);
 		numbers.add(16);
 		numbers.add(2);
 		numbers.add(2);
@@ -42,14 +43,17 @@ public class StreamAPIExample {
 
 //**** Intermediate Operation Methods****//		
 
-//****with streamAPI filter() method that takes Predicate and returns boolean****  n
+//****with streamAPI filter() method that takes Predicate and returns boolean****(Synechron)
 		List<Object> evenList = numbers.stream().filter(j -> j % 2 == 0).collect(Collectors.toList());
 		System.out.println(evenList);
 
-		List<Object> greaterthanten = numbers.stream().filter(j -> j > 10).collect(Collectors.toList());
-		System.out.println(greaterthanten);
+		List<Object> greaterthanTenAndMultipleOfFive = numbers.stream().filter(j -> j > 10).filter(j -> j % 5 == 0).collect(Collectors.toList());
+		System.out.println("GreaterThan Ten multiple of 5 " +greaterthanTenAndMultipleOfFive);
+		
+		List<Object> greaterthanFiveMultipleOfTen = numbers.stream().filter(j -> j > 10 && j % 10 == 0).collect(Collectors.toList());
+		System.out.println("GreaterThan Five and multiple of 5 " + greaterthanFiveMultipleOfTen);
 
-		List<String> list3 = new ArrayList<String>();
+		List<String> list3 = new ArrayList<>();
 		list3.add("John");
 		list3.add("Derek");
 		list3.add("Sourav");
@@ -59,12 +63,11 @@ public class StreamAPIExample {
 		List<String> listString = list3.stream().filter(str -> str.startsWith("A")).collect(Collectors.toList());
 		System.out.println(listString);
 
-		// find duplicate element in list
+		// find duplicate element in list(Thoughtworks)
 		System.out.println("printing duplicates in list");
 		Set<Integer> set = new HashSet<>();
 		numbers.stream().filter(i -> !set.add(i)).forEach(System.out::println);
-		// improvised >> numbers.stream().filter(i->
-		// !set.add(i)).distinct().forEach(System.out::println);
+		// improvised >> numbers.stream().filter(i->!set.add(i)).distinct().forEach(System.out::println);
 
 		// find duplicates in string
 		String str = "madam";
@@ -89,17 +92,6 @@ public class StreamAPIExample {
 		// IntStream.range(0,
 		// list2.size()).filter(i->i%2!=0).map(list2::get).forEach(System.out::println);
 
-//****with streamAPI forEach() method that takes Consumer and returns nothing****
-		numbers.stream().forEach((j) -> {
-			try {
-				int a = j / 0;
-				System.out.println(j);
-			} catch (Exception e) {
-				System.out.println("Catch block");
-			} finally {
-				System.out.println("Finally block");
-			}
-		});
 
 //**** with streamAPI sorted() method that takes Comparator and sort the list
 
@@ -110,12 +102,16 @@ public class StreamAPIExample {
 		numbers.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
 		
 		System.out.println("Largest Number " + numbers.stream().sorted(Comparator.reverseOrder()).findFirst().get());
+		
+		System.out.println("First Three Largest Number " + numbers.stream().sorted(Comparator.reverseOrder()).limit(3).collect(Collectors.toList()));
 
 
 //**** with streamAPI distinct() method, will remove duplicate number
 		List<Integer> distinctElements = numbers.stream().distinct().collect(Collectors.toList());
 		System.out.println("Using distinct() method for unique numbers are " + distinctElements);
 
+		
+		
 //**** Terminal Operation Methods****//
 
 //**** with streamAPI count() method of terminal operation		
@@ -125,7 +121,7 @@ public class StreamAPIExample {
 
 //**** with streamAPI toMap() method of terminal operation converting List to Map
 
-		List<Integer> listToMap = new ArrayList<Integer>();
+		List<Integer> listToMap = new ArrayList<>();
 
 		listToMap.add(1);
 		listToMap.add(2);
@@ -134,19 +130,34 @@ public class StreamAPIExample {
 		listToMap.add(50);
 		listToMap.add(16);
 
-		Map<Object, Object> map = listToMap.stream().collect(Collectors.toMap(s -> s, s -> "Value_" + s));
+		Map<Object, Object> map = listToMap.stream().collect(Collectors.toMap(s -> listToMap.indexOf(s), s -> s));
 
 		for (Entry<Object, Object> entry : map.entrySet()) {
 
 			System.out.print(entry.getKey() + "=" + entry.getValue() + ", ");
 		}
+		
+//****with streamAPI forEach() method that takes Consumer and returns nothing****
+				numbers.stream().forEach((j) -> {
+					try {
+						int a = j / 0;
+						System.out.println(j);
+					} catch (Exception e) {
+						System.out.println("Catch block");
+					} finally {
+						System.out.println("Finally block");
+					}
+				});
 
 //**** with streamAPI toMap() method of terminal for sum of List
 		int sum = numbers.stream().mapToInt(Integer::intValue).sum();
 		System.out.println("sum of list is = " + sum);
 
-//**** with streamAPI toMap() method of max value in list
+//**** with streamAPI max() method of max value in list
 		OptionalInt max = numbers.stream().mapToInt(Integer::intValue).max();
+		
+		//Alternate
+		//Integer max = numbers.stream().max(Comparator.comparing(Integer::intValue)).get();
 
 		if (max.isPresent())
 			System.out.println("Maximum number in List: " + max.getAsInt());
@@ -161,12 +172,12 @@ public class StreamAPIExample {
 		// Display the frequency map
 		frequencyMap.forEach((character, frequency) -> System.out.println(character + ": " + frequency));
 
-		//max occurrence in String
-		Character maxOccurance = frequencyMap.entrySet().stream().max(Comparator.comparing(Map.Entry::getValue)).get().getKey();
+		//max occurrence in String		
+        System.out.println("max occurrence in String is: " + frequencyMap.entrySet().stream()
+        		.sorted(Map.Entry.comparingByValue(Collections.reverseOrder())).findFirst().get().getKey());
 		
-        System.out.println("max occurrence in String is: " + maxOccurance);
-		
-		System.out.println(frequencyMap.entrySet().stream()
+        //second max occurrence in String
+		System.out.println("Second max occurrence in String is: " + frequencyMap.entrySet().stream()
 				.sorted(Map.Entry.comparingByValue(Collections.reverseOrder())).skip(1).findFirst().get().getKey());
 
 		
@@ -180,16 +191,15 @@ public class StreamAPIExample {
 		//alternative
 		//frequencyLinkedMap.entrySet().stream().filter(entry-> entry.getValue() == 1L).findFirst().get().getKey();
 		
-		// second max salary(accenture, coforge)
+		// second max salary(accenture, coforge, synechron)
 		int secondMaxSalary = numbers.stream().sorted(Collections.reverseOrder()).skip(1).findFirst().get();
 
-		// max length word in String
+		// max length word in String(EPAM)
 		String str2 = "Welcome to EPAM";
 		/*String res = Arrays.asList(str2.split(" ")).stream().max((i, j) -> Integer.compare(i.length(), j.length()))
 				.get();*/
 		
-		String res = Arrays.asList(str2.split(" ")).stream().max(Comparator.comparing(String::length))
-				.get();
+		String res = Arrays.asList(str2.split(" ")).stream().max(Comparator.comparing(String::length)).get();
 		
 		
 		System.out.println("max Lenght word is :" + res);

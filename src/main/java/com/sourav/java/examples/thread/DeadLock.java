@@ -35,7 +35,7 @@ public class DeadLock {
 		};
 
 		t1.start();
-//		t1.join(); - to avoid deadlock
+	//  t1.join(); //- to avoid deadlock
 		t2.start();
 		
 		//Solution : in t2 of synchronized block pass same as t1. i.e. 1st - resource1, 2nd - resource2

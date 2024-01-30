@@ -63,7 +63,7 @@ public class DeletionSingleLinkedList {
     public void deleteNode_atLast()
     {
         // Store head node
-        Node temp = head, prev = null;
+        Node temp = head;
  
         // If head node itself holds the data to be deleted
         if (temp != null && temp.next == null) {
@@ -73,8 +73,7 @@ public class DeletionSingleLinkedList {
  
         // Search for the data to be deleted, keep track of
         // the previous node as we need to change temp.next
-        while (temp != null && temp.next != null) {
-        	prev = temp;
+        while (temp.next.next != null) {
             temp = temp.next;
         }
  
@@ -83,7 +82,7 @@ public class DeletionSingleLinkedList {
             return;
  
         // delete last node from linked list
-        prev.next = null;
+        temp.next = null;
     }
     
     

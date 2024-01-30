@@ -2,8 +2,7 @@ package com.sourav.linkedlist.problems;
 
 import java.util.ArrayList;
 
-import com.sourav.linkedlist.problems.ReverseLinkedList.Node;
-
+//Infosys, EPAM
 public class ReverseNodeGivenSize {
 	
 	

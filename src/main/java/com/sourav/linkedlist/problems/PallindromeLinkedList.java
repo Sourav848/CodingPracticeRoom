@@ -28,7 +28,7 @@ public class PallindromeLinkedList {
 			temp = temp.next;
 		}
 
-		StringBuffer sb = new StringBuffer(str);
+		StringBuilder sb = new StringBuilder(str);
 		if (str.equals(sb.reverse().toString()))
 			return true;
 		return false;

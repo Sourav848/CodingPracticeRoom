@@ -2,7 +2,7 @@ package com.sourav.algorithms.tree;
 
 import java.util.ArrayList;
 
-
+//walmart
 public class RightViewBinaryTree {
 	
 	Node root;

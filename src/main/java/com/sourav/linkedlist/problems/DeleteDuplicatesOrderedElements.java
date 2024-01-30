@@ -45,6 +45,7 @@ public class DeleteDuplicatesOrderedElements {
 		list.head.next.next = new Node(15);
 		list.head.next.next.next = new Node(20);
 		list.head.next.next.next.next = new Node(20);
+		list.head.next.next.next.next.next = new Node(20);
 
 		System.out.println("Given Linked list");
 		list.printList(head);

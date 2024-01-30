@@ -19,19 +19,20 @@ class ReverseLinkedList {
 	}
 
 	/* Function to reverse the linked list */
-	Node reverse(Node node)
+	Node reverse(Node head)
 	{
-		Node prev = null;
-		Node current = node;
-		Node next = null;
+		Node prev = head;
+		Node current = head.next;
 		while (current != null) {
-			next = current.next;
+			Node next = current.next;
 			current.next = prev;
 			prev = current;
 			current = next;
 		}
-		node = prev;
-		return node;
+		head.next = null;
+		head = prev;
+		
+		return head;
 	}
 
 	// prints content of double linked list
