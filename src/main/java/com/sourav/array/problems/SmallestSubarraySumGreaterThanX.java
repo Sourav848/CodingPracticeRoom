@@ -28,17 +28,17 @@ public class SmallestSubarraySumGreaterThanX {
                 curr_sum -= arr[start++];
             }
         }
-        return min_len;
+        return min_len+1;
     }
 	
 	public static void main(String[] args) {
 
-		///int arr[] = {1, 4, 45, 6, 0, 19};
-		//int x  =  51;
+		int arr[] = {1, 4, 45, 6, 0, 19};
+		int x  =  51;
 		//int arr[] = {6, 3, 4, 5, 4, 3, 7, 9};
 		//int x  =  16;
-		int[] arr = {2,3,1,1,1,1,1};
-		int x=5;
+	//	int[] arr = {2,3,1,1,1,1,1};
+	//	int x=5;
 		int n = arr.length;
 		System.out.println(smallestSubWithSum(arr, n, x));
 	}

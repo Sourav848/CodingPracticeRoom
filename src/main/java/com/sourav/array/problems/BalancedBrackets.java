@@ -4,14 +4,14 @@ package com.sourav.array.problems;
 // https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
 import java.util.*;
 
-//company : amdocs
+//company : amdocs, Q2 softwares
 
 public class BalancedBrackets {
 
 	// function to check if brackets are balanced
 	static boolean areBracketsBalanced(String expr) {
 		// Using ArrayDeque is faster than using Stack class
-		Stack<Character> stack = new Stack<Character>();
+		Stack<Character> stack = new Stack<>();
 
 		// Traversing the Expression
 		for (int i = 0; i < expr.length(); i++) {

@@ -16,7 +16,7 @@ public class TreeHeight {
 	}
 	
 	
-	static int maxDepth(Node root) {
+	static int maxDepth(Node root) { //TC - 0(n)
 		
 		if (root == null)
 			return 0;
@@ -24,10 +24,7 @@ public class TreeHeight {
 			int lDepth = maxDepth(root.left);
 			int rDepth = maxDepth(root.right);
 
-			if (lDepth > rDepth)
-				return lDepth + 1;
-			else
-				return rDepth + 1;
+		    return 1 + Math.max(lDepth, rDepth);
 		}
 	}
 	
@@ -45,7 +42,8 @@ public class TreeHeight {
 		System.out.println("Height of tree is : " +
 									TreeHeight.maxDepth(tree.root));
 		
-		// If There are 3 nodes in this path that are connected by 2 edges, so height is 2 .
+		//The height of the tree is the number of vertices in the tree from the root to the deepest node. 
+		// If There are 3 nodes in this path that are connected by 2 edges, so height is 3 .
 	}
 
 }

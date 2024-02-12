@@ -34,22 +34,22 @@ public class DetectLoop {
 
 	// Returns true if there is a loop in linked Floyd detection algorithm
 	// list else returns false.
-	static boolean detectLoop(Node h)
+	static boolean detectLoop(Node node)
 	{
-		HashSet<Node> s = new HashSet<Node>();
-		while (h != null) {
+		HashSet<Node> s = new HashSet<>();
+		while (node != null) {
 			// If we have already has this node
-			// in hashmap it means their is a cycle
+			// in hashset it means their is a cycle
 			// (Because you we encountering the
 			// node second time).
-			if (s.contains(h))    // remind that we are checking node address not value
+			if (s.contains(node))    // remind that we are checking node address not value
 				return true;
 
 			// If we are seeing the node for
 			// the first time, insert it in hash
-			s.add(h);
+			s.add(node);
 
-			h = h.next;
+			node = node.next;
 		}
 
 		return false;

@@ -181,7 +181,7 @@ public class StreamAPIExample {
 				.sorted(Map.Entry.comparingByValue(Collections.reverseOrder())).skip(1).findFirst().get().getKey());
 
 		
-		// First non repeating character
+		// First non repeating character(UST, Capegemini)
 		LinkedHashMap<Character, Long> frequencyLinkedMap = input.chars().mapToObj(c -> (char) c)
 				.collect(Collectors.groupingBy(i -> i, LinkedHashMap::new, Collectors.counting())); // Store the chars
 																									// in map with count
@@ -200,9 +200,16 @@ public class StreamAPIExample {
 				.get();*/
 		
 		String res = Arrays.asList(str2.split(" ")).stream().max(Comparator.comparing(String::length)).get();
-		
-		
 		System.out.println("max Lenght word is :" + res);
+
+//**** with streamAPI reduce() method - To reduce the list of the elements of a stream to a single value.
+		 List<Integer> listOfnumbers = Arrays.asList(1, 2, 3, 4, 5);
+	     int sumOfList = listOfnumbers.stream().reduce(0, (x, y) -> x + y);
+	     System.out.println("Sum of numbers: " + sumOfList);
+	     
+	     List<String> words = Arrays.asList("Java", "Stream", "API");
+	     String concatenated = words.stream().reduce("", (s1, s2) -> s1 + s2);
+	     System.out.println("Concatenated string: " + concatenated);
 
 	}
 }

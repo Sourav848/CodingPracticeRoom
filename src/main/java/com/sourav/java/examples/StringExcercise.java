@@ -18,6 +18,15 @@ public class StringExcercise {
 	if (string1.equals(string2)) { // True, same string content
 	  System.out.println("Strings are equal (using String's equals())");
 	}
+	
+	String str1 = new String("Hello");
+	String str2 = str1.concat(" World");
+
+	System.out.println(str1); // Output: Hello
+	System.out.println(str2); // Output: Hello World
+
+	
+	
 	}
 
 }

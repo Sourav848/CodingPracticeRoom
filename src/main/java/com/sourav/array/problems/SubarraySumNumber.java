@@ -2,7 +2,7 @@ package com.sourav.array.problems;
 
 import java.util.HashMap;
 
-//Number of subarrays having sum exactly equal to k.
+//Number of continuous subarray having sum exactly equal to k.
 
 public class SubarraySumNumber {
 

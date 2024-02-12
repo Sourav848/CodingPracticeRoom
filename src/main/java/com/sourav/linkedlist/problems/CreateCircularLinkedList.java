@@ -14,8 +14,8 @@ public class CreateCircularLinkedList {
 	}
 
 	// Declaring head and tail pointer as null.
-	public Node head = null;
-	public Node tail = null;
+	 Node head = null;
+	 Node tail = null;
 
 	// This function will add the new node at the end of the list.
 	public void add(int data) {

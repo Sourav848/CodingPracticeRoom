@@ -21,18 +21,15 @@ class ReverseLinkedList {
 	/* Function to reverse the linked list */
 	Node reverse(Node head)
 	{
-		Node prev = head;
-		Node current = head.next;
+		Node prev = null;
+		Node current = head;
 		while (current != null) {
-			Node next = current.next;
+			Node temp = current.next;
 			current.next = prev;
 			prev = current;
-			current = next;
+			current = temp;
 		}
-		head.next = null;
-		head = prev;
-		
-		return head;
+		return prev;
 	}
 
 	// prints content of double linked list
@@ -48,10 +45,10 @@ class ReverseLinkedList {
 	public static void main(String[] args)
 	{
 		ReverseLinkedList list = new ReverseLinkedList();
-		list.head = new Node(85);
-		list.head.next = new Node(15);
-		list.head.next.next = new Node(4);
-		list.head.next.next.next = new Node(20);
+		list.head = new Node(1);
+		list.head.next = new Node(2);
+		list.head.next.next = new Node(3);
+		list.head.next.next.next = new Node(4);
 
 		System.out.println("Given Linked list");
 		list.printList(head);

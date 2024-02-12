@@ -1,4 +1,4 @@
-package com.sourav.algorithm.stack;
+package com.sourav.algorithm.stack.queue;
 
 public class Stack {
 	   private int maxSize;

@@ -5,7 +5,6 @@ public class ChangeCase {  //to replace lower-case characters with upper-case an
             
         String str1="Great Power";  //immutable  
         StringBuffer newStr=new StringBuffer(str1);  ////mutable  
-        StringBuffer newStr1=new StringBuffer();
             
         for(int i = 0; i < str1.length(); i++) {    
                 
@@ -19,12 +18,7 @@ public class ChangeCase {  //to replace lower-case characters with upper-case an
                 //Convert it into upper case using toLowerCase() function    
                 newStr.setCharAt(i, Character.toLowerCase(str1.charAt(i)));    
             }    
-            System.out.println(newStr1.append(str1.charAt(i)));
-
         } 
-        System.out.println(Character.isLetter(':'));
-        System.out.println("Hello  //" + newStr1.reverse().equals(newStr));
-
         System.out.println("String after case conversion : " + newStr);    
     }    
 }     

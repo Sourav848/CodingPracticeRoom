@@ -1,10 +1,18 @@
 package com.sourav.string.problems;
 
- class MaximumEvenWord {
+import java.util.Arrays;
+import java.util.Comparator;
+
+class MaximumEvenWord {
 
 	public static void main(String args[]) {
 
-		String str = "this is string a test pakistan landthetruth";
+		String str = "this is string pakistan landthetruth";
+		
+		/*String res = Arrays.asList(str.split(" ")).stream().filter(words-> words.length() % 2 == 0)
+				.max(Comparator.comparing(String::length)).get();
+		
+		System.out.println("max even word : "+res);*/
 
 		System.out.println(findMaxLenEven(str));
 

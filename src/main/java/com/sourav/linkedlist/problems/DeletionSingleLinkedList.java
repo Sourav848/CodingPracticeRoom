@@ -112,9 +112,9 @@ public class DeletionSingleLinkedList {
  
         // Node temp->next is the node to be deleted
         // Store pointer to the next of node to be deleted
-        Node next = temp.next.next;
+        temp.next = temp.next.next;
  
-        temp.next = next;  // Unlink the deleted node from list
+       // temp.next = next;  // Unlink the deleted node from list
     }
     
     

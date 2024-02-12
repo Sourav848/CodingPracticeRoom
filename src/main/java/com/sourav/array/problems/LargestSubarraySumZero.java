@@ -9,7 +9,6 @@ public class LargestSubarraySumZero {
 	static int maxLen(int arr[], int n)
     {
         int maxlen = 0;
-        int cnt = 0;
         int prefixSum = 0;
         int i = -1;
         HashMap<Integer, Integer> map = new  HashMap<>();
@@ -21,13 +20,11 @@ public class LargestSubarraySumZero {
          if (!map.containsKey(prefixSum)){
              map.put(prefixSum, i);
          } else {
-             cnt++;
              int len = i - map.get(prefixSum);
              if (len > maxlen)
               maxlen = len;
           }
         }
-        System.out.println("sss--->>"+ cnt);
         return maxlen;
     }
 	public static void main(String[] args) {

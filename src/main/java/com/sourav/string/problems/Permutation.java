@@ -7,11 +7,12 @@ public class Permutation {
 	
 	public String swap(String str, int i, int j)
 	{
-		char temp;
 		char[] charArray = str.toCharArray();
-		temp = charArray[i] ;
+		
+		char temp = charArray[i] ;
 		charArray[i] = charArray[j];
 		charArray[j] = temp;
+		
 		//System.out.println(String.valueOf(charArray));
 		return String.valueOf(charArray);
 	}

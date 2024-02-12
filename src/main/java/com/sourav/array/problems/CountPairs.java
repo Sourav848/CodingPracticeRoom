@@ -8,30 +8,6 @@ pairs with given sum*/
 // Technique : Hashing
 
 class CountPairs {
-	// Iterating loop where in each iteration keep left constant and traversing from R-L
-	// checking sum is equals or not, if it is making count
-	// decrementing right after condition get flase again incrementing left by 1 and reassigning right to n-1.
-	//keep iterating until left will traverse to n and all possible pair of array got checked.
-	
-	
-	/*static int getPairsCount(int n, int sum)
-	{
-		int left = 0;
-		int right = n - 1;
-		int count = 0;
-		while (left < n && right >= 0) {
-			if (left != right) {
-				if ((arr[left] + arr[right]) == sum) {
-					count++;
-				}
-				right--;
-			} else {
-				right = n - 1;
-				left++;
-			}
-		}
-		return count;
-	}*/
 	
 	static int getPairsCount(int arr[], int n, int sum) {
 		HashMap<Integer, Integer> hm = new HashMap<>();

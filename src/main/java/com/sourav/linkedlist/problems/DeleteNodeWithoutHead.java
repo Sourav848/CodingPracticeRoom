@@ -18,7 +18,7 @@ public class DeleteNodeWithoutHead {
 			this.next = null;
 		}
 	}
-
+//update del node value from adjacent node value, and delete adjacent node
      public static void deleteNode(Node del) {
         
         Node nextNode = del.next;

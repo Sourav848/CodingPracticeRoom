@@ -2,7 +2,7 @@ package com.sourav.linkedlist.problems;
 
 import java.util.HashSet;
 
-public class DeleteDuplicatesUnorderedElement {
+public class DeleteDuplicatesElement {
 
 	static Node head;
 
@@ -45,12 +45,12 @@ public class DeleteDuplicatesUnorderedElement {
 
 	public static void main(String[] args) {
 
-		DeleteDuplicatesUnorderedElement nodes = new DeleteDuplicatesUnorderedElement();
+		DeleteDuplicatesElement nodes = new DeleteDuplicatesElement();
 		nodes.head = new Node(85);
 		nodes.head.next = new Node(15);
 		nodes.head.next.next = new Node(20);
 		nodes.head.next.next.next = new Node(4);
-		nodes.head.next.next.next.next = new Node(15);
+		nodes.head.next.next.next.next = new Node(15);//this is duplicate value in node so delete this 
 
 		removeDuplicates(head);
 

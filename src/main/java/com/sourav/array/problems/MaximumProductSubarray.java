@@ -1,7 +1,6 @@
 package com.sourav.array.problems;
 
 public class MaximumProductSubarray {
-
 	
 	
 	static long maxProduct(int[] nums, int n) {
@@ -9,7 +8,6 @@ public class MaximumProductSubarray {
 	        for(int i=0;i<n;i++) {
 	            if(nums[i] == 0){
 	                cur = 1;
-	               // prod = Math.max(prod, nums[i]);
 	            }
 	            else {
 	                cur *= nums[i];
@@ -20,7 +18,6 @@ public class MaximumProductSubarray {
 	        for(int i=n-1;i>=0;i--){
 	            if(nums[i] == 0){
 	                cur = 1;
-	               // prod = Math.max(prod, nums[i]);
 	            }
 	            else{
 	                cur *= nums[i];

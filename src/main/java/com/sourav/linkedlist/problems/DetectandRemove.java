@@ -43,17 +43,17 @@ public class DetectandRemove {
 
 	// Returns true if the loop is removed from the linked
 	// list else returns false.
-	static boolean removeLoop(Node h)
+	static boolean removeLoop(Node node)
 	{
-		HashSet<Node> s = new HashSet<Node>();
+		HashSet<Node> s = new HashSet<>();
 		Node prev = null;
-		while (h != null) {
+		while (node != null) {
 			// If we have already has this node
-			// in hashmap it means their is a cycle and we
+			// in hashset it means their is a cycle and we
 			// need to remove this cycle so set the next of
 			// the previous pointer with null.
 
-			if (s.contains(h)) { // remind that we are checking node address not value
+			if (s.contains(node)) { // remind that we are checking node address not value
 				prev.next = null;
 				return true;
 			}
@@ -61,9 +61,9 @@ public class DetectandRemove {
 			// If we are seeing the node for
 			// the first time, insert it in hash
 			else {
-				s.add(h);
-				prev = h;
-				h = h.next;
+				s.add(node);
+				prev = node;
+				node = node.next;
 			}
 		}
 
