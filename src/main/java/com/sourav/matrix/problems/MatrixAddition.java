@@ -1,4 +1,4 @@
-package com.sourav.array.problems;
+package com.sourav.matrix.problems;
 
 import java.util.Scanner;
 
@@ -11,12 +11,7 @@ public class MatrixAddition {
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Define length of array in number");
-//		int i = input.nextInt();
-//		int j = input.nextInt();
-
-//		int[][] a = new int[i][j];
-//		int[][] b = new int[i][j];
-//creating another matrix to store the sum of two matrices    
+ 
 		int[][] c = new int[3][3]; // 3 rows and 3 columns
 
 //adding and printing addition of 2 matrices    

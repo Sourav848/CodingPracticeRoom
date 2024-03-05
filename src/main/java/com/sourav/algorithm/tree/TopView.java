@@ -1,4 +1,4 @@
-package com.sourav.algorithms.tree;
+package com.sourav.algorithm.tree;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -6,10 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import com.sourav.algorithms.tree.WidthShadow.Node;
-
-
-public class BottomView {
+public class TopView {
 
 	static class Node {
 
@@ -31,31 +28,18 @@ public class BottomView {
 			this.hl = hl;
 		}
 	}
-	
-	
-	static void width(Node root, int hl, int[] arr) {
-		if (root == null) return;
-		
-		
-		arr[0] = Math.min(arr[0], hl);
-		arr[1] = Math.max(arr[1], hl);
-		
-		width(root.left, hl-1, arr);
-		width(root.right, hl+1, arr);
-		
-	}
 
 	static List<Integer> topView(Node root) {
-		ArrayList<Integer> ans = new ArrayList<>();
-		
-		int[] arr = new int[2];
-		width(root,  0,  arr);
-		
-		int len = arr[1] - arr[0] + 1;
-		for (int i=0; i<len; i++) ans.add(0);
-		
 		LinkedList<vPair> ll = new LinkedList<>();
-		ll.addLast(new vPair(root, Math.abs(arr[0]))); // Adding +2 
+
+		Map<Integer, List<Integer>> map = new LinkedHashMap<>();
+
+		List<Integer> ans = new ArrayList<>();
+
+		int minhl = 0;
+		int maxhl = 0;
+
+		ll.addLast(new vPair(root, 0));
 
 		while (ll.size() != 0) {
 			int size = ll.size();
@@ -63,10 +47,11 @@ public class BottomView {
 
 				vPair rp = ll.removeFirst();
 
-				Node node = rp.node;
-				int hl = rp.hl;
-				
-				ans.set(hl, node.data);
+				maxhl = Math.max(maxhl, rp.hl);
+				minhl = Math.min(minhl, rp.hl);
+
+				map.putIfAbsent(rp.hl, new ArrayList<>());
+				map.get(rp.hl).add(rp.node.data);
 
 				if (rp.node.left != null)
 					ll.addLast(new vPair(rp.node.left, rp.hl - 1));
@@ -74,6 +59,14 @@ public class BottomView {
 					ll.addLast(new vPair(rp.node.right, rp.hl + 1));
 			}
 
+		}
+
+		for (int i = minhl; i <= maxhl; i++) {
+			List<Integer> lisy = map.get(i);
+			for (Integer I : lisy) {
+				ans.add(I);
+				break;
+			}
 		}
 
 		return ans;
@@ -90,13 +83,13 @@ public class BottomView {
 		System.out.println(topView(root)+ " ");
 		
 	}
-	/*                    HL= 2 = (10, 60)
+	/*                    HL= 0 = (10, 60)
 					 	     10
 						    /  \
-				1 = (20) 20   30 3 = (30)
+				-1 = (20) 20   30 1 = (30)
 						  / \ 
-		    0 = (40)	 40  60 = 2     
+		    -2 = (40)	 40  60     
 						
-						Output: [40, 20, 60, 30]   */
+						Output: [40, 20, 10, 30]  */
 
 }

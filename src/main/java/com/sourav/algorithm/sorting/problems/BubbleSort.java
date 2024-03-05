@@ -1,4 +1,4 @@
-package com.sourav.algorithms.sorting.problems;
+package com.sourav.algorithm.sorting.problems;
 
 import java.util.Scanner;
 

@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.OptionalInt;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -72,7 +73,6 @@ public class StreamAPIExample {
 		// find duplicates in string
 		String str = "madam";
 		Set<Character> set1 = new HashSet<>();
-
 		System.out.println("printing duplicates in string");
 		str.chars().mapToObj(c -> (char) c).filter(i -> !set1.add(i)).distinct().forEach(System.out::println);
 
@@ -165,7 +165,7 @@ public class StreamAPIExample {
 //**** with streamAPI groupingBy() method - when you want vs vs vs
 		String input = "AABBBBDDCCCCCEEEEEEHG";
 
-		// Using Java Stream API to find frequency of characters(TechMahindra)
+		// Using Java Stream API to find frequency of characters(TechMahindra, OpenText)
 		Map<Character, Long> frequencyMap = input.chars().mapToObj(c -> (char) c)
 				.collect(Collectors.groupingBy(i -> i, Collectors.counting()));
 
@@ -174,7 +174,7 @@ public class StreamAPIExample {
 
 		//max occurrence in String		
         System.out.println("max occurrence in String is: " + frequencyMap.entrySet().stream()
-        		.sorted(Map.Entry.comparingByValue(Collections.reverseOrder())).findFirst().get().getKey());
+        		.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).findFirst().get().getKey());
 		
         //second max occurrence in String
 		System.out.println("Second max occurrence in String is: " + frequencyMap.entrySet().stream()
@@ -210,6 +210,9 @@ public class StreamAPIExample {
 	     List<String> words = Arrays.asList("Java", "Stream", "API");
 	     String concatenated = words.stream().reduce("", (s1, s2) -> s1 + s2);
 	     System.out.println("Concatenated string: " + concatenated);
+	     
+	     Random random = new Random();
+	     random.ints().limit(10).forEach(System.out::println);
 
 	}
 }

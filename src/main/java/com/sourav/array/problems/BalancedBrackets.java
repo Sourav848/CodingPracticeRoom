@@ -4,7 +4,7 @@ package com.sourav.array.problems;
 // https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
 import java.util.*;
 
-//company : amdocs, Q2 softwares
+//company : Amdocs, Q2 softwares, OpenText
 
 public class BalancedBrackets {
 
@@ -57,6 +57,7 @@ public class BalancedBrackets {
 	// Driver code
 	public static void main(String[] args) {
 		String expr = "([{}])";
+	//	String expr = ")";
 
 		// Function call
 		if (areBracketsBalanced(expr))

@@ -32,5 +32,10 @@ public static void main(String[] args)
                 " is greater than " +
                 "\"" + str2 + "\"");
         }
+        
+        String s3 = "a";
+        String s4 = "b";
+        int results = s3.compareTo(s4);
+        System.out.println("Comparisions of String" +results);
     }
 }

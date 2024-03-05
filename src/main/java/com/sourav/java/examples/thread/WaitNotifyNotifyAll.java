@@ -28,11 +28,16 @@ public class WaitNotifyNotifyAll {
 class Test {
 	public static void main(String args[]) {
 		final WaitNotifyNotifyAll c = new WaitNotifyNotifyAll();
+		
+	//	Thread 1
+		
 		new Thread() {
 			public void run() {
 				c.withdraw(15000);
 			}
 		}.start();
+		
+		// Thread 2
 		new Thread() {
 			public void run() {
 				c.deposit(10000);

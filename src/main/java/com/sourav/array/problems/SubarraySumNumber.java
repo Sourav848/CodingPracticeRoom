@@ -20,6 +20,7 @@ public class SubarraySumNumber {
 				res++;
 			if (map.containsKey(prefixsum - sum))
 				res += map.get(prefixsum - sum);
+			//occurance of prefixsum
 			Integer count = map.get(prefixsum);
 			if (count == null)
 				map.put(prefixsum, 1);

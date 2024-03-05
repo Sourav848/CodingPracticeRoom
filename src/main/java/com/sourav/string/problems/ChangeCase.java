@@ -21,4 +21,4 @@ public class ChangeCase {  //to replace lower-case characters with upper-case an
         } 
         System.out.println("String after case conversion : " + newStr);    
     }    
-}     
+}      

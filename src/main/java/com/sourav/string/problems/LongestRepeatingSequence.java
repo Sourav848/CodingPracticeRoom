@@ -4,18 +4,21 @@ package com.sourav.string.problems;
 
 public class LongestRepeatingSequence {
 
-	public static String lcp(String s, String t) { // longest common prefix algo
-		int n = Math.min(s.length(), t.length());
-		for (int i = 0; i < n; i++) {
-			if (s.charAt(i) != t.charAt(i)) {
-				return s.substring(0, i);
-			}
-		}
-		return s.substring(0, n);
+	public static String lcp(String s1, String s2) { // longest common prefix algo
+        int idx = 0;
+        while(idx < s1.length() && idx < s2.length()){
+            if(s1.charAt(idx) == s2.charAt(idx)){
+                idx++;
+            } else {
+                break;
+            }
+        }
+        return s1.substring(0, idx);
 	}
 
 	public static void main(String[] args) {
 		String str = "acbdfghybdf";
+	//	String str = "aabcabab"; //output : ab
 		String lrs = "";
 		int n = str.length();
 		for (int i = 0; i < n; i++) {

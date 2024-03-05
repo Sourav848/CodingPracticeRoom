@@ -1,4 +1,4 @@
-package com.sourav.algorithms.sorting.problems;
+package com.sourav.algorithm.sorting.problems;
 
 //Java implementation of QuickSort
 
@@ -71,6 +71,7 @@ class QuickSort {
 //Driver Code
 	public static void main(String[] args) {
 		int[] arr = { 10, 7, 8, 9, 1, 5 };
+		//int[] arr = {1, -2, 3, 2 -7, -5, 11, 6};
 		int n = arr.length;
 
 		quickSort(arr, 0, n - 1);

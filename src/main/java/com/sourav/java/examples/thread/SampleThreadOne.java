@@ -2,8 +2,8 @@ package com.sourav.java.examples.thread;
 
 class SampleThreadOne extends Thread {
 	public void run() {
-		for (int i = 1; i <= 4; i++) {
-			System.out.println("Hi");
+		for (int i = 1; i <= 5; i++) {
+			System.out.println(i);
 			// will execute after 1 sec
 			try {
 				sleep(1000);

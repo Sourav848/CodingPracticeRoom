@@ -1,7 +1,7 @@
 package com.sourav.java.examples.thread;
 
 class Table3 {
-	synchronized static void printTable(int n) {
+	static synchronized void printTable(int n) {
 		for (int i = 1; i <= 10; i++) {
 			System.out.println(n * i);
 			try {

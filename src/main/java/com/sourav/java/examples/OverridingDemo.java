@@ -1,6 +1,5 @@
 package com.sourav.java.examples;
 
-// Link : https://www.w3spoint.com/exception-handling-with-method-overriding
 /**
  * This program is used to show that If 
  * the super class method does not declare
@@ -10,6 +9,8 @@ package com.sourav.java.examples;
  */
  
 class Parent{
+	
+	int x = 10;
 	
 	public Parent() {
 		System.out.println("Super Class Constructor");
@@ -43,6 +44,10 @@ class Parent{
 }
  
 class Child extends Parent {
+	
+	int x = 20;
+	int y = 30;
+	
 	public Child() {
 		System.out.println("SubClass Class Constructor");
 	//	super(); - Will throw syntax error >> Constructor call must be the first statement in a constructor
@@ -71,19 +76,21 @@ class Child extends Parent {
 	public void m3() { // throws IOException = checked exception == will throw error
 		System.out.println("Sub class.");
 	}
-	
-	
 }
 public class OverridingDemo {
 	public static void main(String args[]){
 		//Creating subclass object.
 		Parent parent = new Child();
+		
+		//Child child1 = (Child)new Parent(); //downcasting is not possible in Java throws RTE
  
+		System.out.println("In this case parent value will be printed :"+parent.x);
 		//method call.
 		parent.display();
 		parent.covariantExampleOne();
 		parent.covariantExampleTwo();
 		parent.staticMethod();
+		Parent.staticMethod();
 	//	subClass.m3(); - It throws compilation error because it's not present in parent class and also upcasting scenario
 		
 		Child child = new Child();//Downcasting is not supported

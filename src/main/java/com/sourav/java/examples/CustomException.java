@@ -24,6 +24,8 @@ public class CustomException {
 	  
 	      System.out.println("rest of the code...");  
 	  }  
+	   
+	   //validate(13) with try and catch handled >> ;
 	
 	
 }

@@ -14,7 +14,6 @@ public class AllSubsets {
             //This loop adds the next character every iteration for the subset to form and add it to the array  
             for(int j = i; j < len; j++) {  
                 arr[temp++] = str.substring(i, j+1);  
-               // temp++;  
             }  
         }  
   

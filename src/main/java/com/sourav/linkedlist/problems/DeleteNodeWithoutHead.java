@@ -22,8 +22,8 @@ public class DeleteNodeWithoutHead {
      public static void deleteNode(Node del) {
         
         Node nextNode = del.next;
-        del.data =  nextNode.data;
-        del.next = nextNode.next;
+        del.data =  nextNode.data;//copy next node data to current data
+        del.next = nextNode.next;//delete next node
     }
 
 	void printList(Node node) {

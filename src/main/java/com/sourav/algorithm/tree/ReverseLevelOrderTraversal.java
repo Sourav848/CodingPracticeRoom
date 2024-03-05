@@ -1,4 +1,4 @@
-package com.sourav.algorithms.tree;
+package com.sourav.algorithm.tree;
 
 
 import java.util.ArrayList;

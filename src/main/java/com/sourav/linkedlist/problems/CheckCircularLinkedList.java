@@ -8,7 +8,7 @@ public class CheckCircularLinkedList {
 	static class Node {
 		int data;
 		Node next;
-
+ 
 		public Node(int data) {
 			this.data = data;
 			this.next = null;
@@ -18,7 +18,6 @@ public class CheckCircularLinkedList {
 	static boolean isCircular(Node head) {
 	Node temp = head;
 	while (temp != null) {
-	    
 	    if (temp.next == head)
 	      return true;
 	    temp = temp.next;
@@ -31,6 +30,8 @@ public class CheckCircularLinkedList {
 		while (node != null) {
 			System.out.print(node.data + " ");
 			node = node.next;
+			if (node == head)
+				break;
 		}
 	}
 
@@ -42,6 +43,7 @@ public class CheckCircularLinkedList {
 		list.head.next.next = new Node(16);
 		list.head.next.next.next = new Node(20);
 		list.head.next.next.next.next = new Node(25);
+		list.head.next.next.next.next.next = list.head;
 
 		System.out.println("Given Linked list");
 		list.printList(head);

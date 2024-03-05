@@ -8,7 +8,9 @@ public class ThreadClass {
         SampleThreadTwo obj2= new SampleThreadTwo();
         
      obj1.start();
- //try{ Thread.sleep(10);} catch(Exception e){}
+     
+    try{ obj1.join();} catch(Exception e){}
+     
      obj2.start();
      }
 

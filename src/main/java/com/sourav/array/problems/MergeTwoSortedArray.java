@@ -2,6 +2,7 @@ package com.sourav.array.problems;
 
 import java.util.Arrays;
 
+//company :: wissen
 public class MergeTwoSortedArray {
 
 	static int[] MergeSortTwo(int arr1[], int arr2[], int l, int m) {

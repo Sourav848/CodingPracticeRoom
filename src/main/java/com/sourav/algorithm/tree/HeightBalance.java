@@ -1,4 +1,4 @@
-package com.sourav.algorithms.tree;
+package com.sourav.algorithm.tree;
 
 public class HeightBalance {
 
@@ -13,10 +13,16 @@ public class HeightBalance {
 		}
 	}
 
-	static int height(Node root) {
+	static int height(Node root) { //TC - 0(n)
+		
 		if (root == null)
 			return 0;
-		return Math.max(height(root.left), height(root.right)) + 1;
+		else {
+			int lDepth = height(root.left);
+			int rDepth = height(root.right);
+
+		    return 1 + Math.max(lDepth, rDepth);
+		}
 	}
 
 	static boolean isBalanced(Node root) {

@@ -3,7 +3,7 @@ package com.sourav.array.problems;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//companies : DXC, EPAM
+//companies : DXC, EPAM, Oracle
 
 public class AlternatePosNegNumbers {
 	static void rearrange(int arr[], int n) {
@@ -47,7 +47,7 @@ public class AlternatePosNegNumbers {
 
 	}
 
-	public static void main(String[] args) throws java.lang.Exception {
+	public static void main(String[] args) throws Exception {
 
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter no. of elements you want in array:");

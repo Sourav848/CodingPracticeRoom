@@ -1,4 +1,4 @@
-package com.sourav.algorithms.sorting.problems;
+package com.sourav.algorithm.sorting.problems;
 
 public class MergeSort {
     static void merge(int arr[], int l, int m, int r) {

@@ -40,6 +40,17 @@ public class MiddleElementLinkedList {
 		}
 		return ptr1.data;
 	}
+	static int count=0;
+	
+	public static int length(Node head) {
+		Node temp = head;
+		if (temp != null) {
+			temp = temp.next;
+			count++;
+			length(temp);
+		}
+		return count;
+	}
 
 	void printList(Node node) {
 		while (node != null) {
@@ -62,7 +73,11 @@ public class MiddleElementLinkedList {
 		System.out.println("");
 		System.out.println("Middle Element of linked list ----> " + getMiddle(head));
 		System.out.println("Second approach By two Pointer ----> "+ getMiddleByTwoPointer(head));
+	
+	    System.out.println(length(head));
+
 	}
+	
 	
 	
 	/*Method 2: Traverse linked list using two pointers. Move one pointer by one and the other pointers by two. 

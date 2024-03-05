@@ -1,4 +1,4 @@
-package com.sourav.algorithms.dynamicprogram.problems;
+package com.sourav.algorithm.dynamicprogram.problems;
 
 public class CoinProblem {
 	// m is size of coins array (number of different coins)

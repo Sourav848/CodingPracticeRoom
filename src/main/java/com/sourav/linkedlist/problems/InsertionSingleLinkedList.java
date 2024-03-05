@@ -26,7 +26,6 @@ public class InsertionSingleLinkedList {
 	{
 		// Create a new node with given data
 		Node new_node = new Node(data);
-		new_node.next = null;
 
 		// If the Linked List is empty,
 		// then make the new node as head
@@ -49,7 +48,6 @@ public class InsertionSingleLinkedList {
 	{
 		// Create a new node with given data
 		Node new_node = new Node(data);
-		new_node.next = null;
 
 		// If the Linked List is empty,
 		// then make the new node as head
@@ -76,7 +74,6 @@ public class InsertionSingleLinkedList {
 	{
 		// Create a new node with given data
 		Node new_node = new Node(data);//temp1
-		new_node.next = null;
 
 		// If the Linked List is empty,
 		// then make the new node as head
@@ -86,14 +83,14 @@ public class InsertionSingleLinkedList {
 		else {
 			// Else traverse till the last node
 			// and insert_at_last the new_node there
-			Node last  = list.head; //temp2
+			Node temp  = list.head; //temp2
 			
              for(int i=1; i<=pos-2;i++) {
-            	 last  = last.next;
+            	 temp  = temp.next;
              }
-			// Insert the new_node at last node
-             new_node.next = last.next;
-             last.next = new_node;
+			// Insert the new_node at temp node
+             new_node.next = temp.next;//attaching newnode first
+             temp.next = new_node;//detaching current node
 		}
 
 		// Return the list by head

@@ -1,5 +1,6 @@
 package com.sourav.array.problems;
 
+//companies : Sapiens
 public class SecondMax {
 
 	// JAVA Code for Find Second largest

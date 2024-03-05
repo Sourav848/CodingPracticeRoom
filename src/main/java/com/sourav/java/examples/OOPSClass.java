@@ -105,19 +105,3 @@ class OOPSClass {
 	}
 
 }
-
-/*
- * Output:
- * 
- * One
- * 
- * Two
- * 
- * 6
- * 
- * 7.0
- * 
- * Name : Sandeep's
- * 
- * bike is Running.
- */

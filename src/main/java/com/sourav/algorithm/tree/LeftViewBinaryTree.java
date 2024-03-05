@@ -1,14 +1,12 @@
-package com.sourav.algorithms.tree;
+package com.sourav.algorithm.tree;
 
 import java.util.ArrayList;
 
-//walmart
-public class RightViewBinaryTree {
-	
+public class LeftViewBinaryTree {
+
 	Node root;
-	
-	static class Node
-	{
+
+	static class Node {
 		int data;
 		Node left = null, right = null;
 
@@ -16,8 +14,8 @@ public class RightViewBinaryTree {
 			this.data = key;
 		}
 	}
-	
-	public static ArrayList<Integer> rightView(Node root) {
+
+	public static ArrayList<Integer> leftView(Node root) {
 		ArrayList<Integer> output = new ArrayList<Integer>();
 		depthFirstSearch(root, 0, output);
 		return output;
@@ -31,27 +29,25 @@ public class RightViewBinaryTree {
 			output.add(root.data);
 		}
 
-		if (root.right != null) {
-			depthFirstSearch(root.right, count + 1, output);
-		}
-
 		if (root.left != null) {
 			depthFirstSearch(root.left, count + 1, output);
 		}
 
+		if (root.right != null) {
+			depthFirstSearch(root.right, count + 1, output);
+		}
 	}
 
 	public static void main(String[] args) {
-		RightViewBinaryTree tree = new RightViewBinaryTree();
+		LeftViewBinaryTree tree = new LeftViewBinaryTree();
 
 		tree.root = new Node(1);
 		tree.root.left = new Node(2);
 		tree.root.right = new Node(3);
 		tree.root.left.left = new Node(4);
 		tree.root.left.right = new Node(5);
-		//tree.root.right.left = new Node(6);
 
-		System.out.println("Right view of Binary tree is : " + rightView(tree.root));
+		System.out.println("Left view of Binary tree is : " + leftView(tree.root));
 
 	}
 

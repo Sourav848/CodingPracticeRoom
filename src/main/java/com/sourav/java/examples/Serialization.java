@@ -39,9 +39,10 @@ public class Serialization {
         person.setAge(30);
 
         //Java In Built Serialization
-        FileOutputStream fos = new FileOutputStream("person.dat");
+        FileOutputStream fos = new FileOutputStream("person.data");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(person);
+        System.out.println("serialize :"+ oos);
         oos.close();
         fos.close(); 
         

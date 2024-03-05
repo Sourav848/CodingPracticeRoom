@@ -9,8 +9,6 @@ public class ReverseStringBuffer {
 			return null;
 		
 	    String words[]=str.split("\\s");  
-	  //  char words1[]= str.toCharArray();
-	  //  List<String> list = new ArrayList<>(Arrays.asList(words));
 	    String reverseWord="";  
 	    Collections.reverse(Arrays.asList(words)); 
 	    for(String w:words){  

@@ -44,10 +44,9 @@ public class StreamAPIObjectExample {
   		Map<String, Long> map = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartmentName, Collectors.counting()));
   		System.out.println(map);
   			
-  		int maxSalary  = employeeList.stream().mapToInt(Employee::getSalary).max().getAsInt();
+  		String maxSalary  = employeeList.stream().max(Comparator.comparing(Employee::getSalary)).get().getName();
   		  		
-  		employeeList.stream().filter(emp->emp.getSalary()==maxSalary).forEach(i->System.out.println(i.getName()));
-  		
+  		System.out.println("Max Salary Employee name is: " + maxSalary);
   		//second max sal(CTS)
   		System.out.println("Second Max Salary is: " + employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).skip((employeeList.size()-2)).findFirst().get().getName());
 
