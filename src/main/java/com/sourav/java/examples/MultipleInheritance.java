@@ -9,6 +9,8 @@ interface InterfaceOne {
 }
 
 interface InterfaceTwo {
+	
+	public void eat();
     public void bark();
 }
 

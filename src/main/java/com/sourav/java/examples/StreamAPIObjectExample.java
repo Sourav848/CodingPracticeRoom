@@ -21,13 +21,14 @@ public class StreamAPIObjectExample {
  
         ArrayList<Employee> employeeList = new ArrayList<>();
         employeeList.add(new Employee(1, "Mohan", "Male", 35, 100, "HR", 500, 2010));
-        employeeList.add(new Employee(5, "Ramesh", "Male", 38, 100, "HR", 6000, 2010));
+        employeeList.add(new Employee(5, "Ramesh", "Male", 38, 100, "HR", 8000, 2010));
         employeeList.add(new Employee(5, "Richa", "Female", 38, 100, "HR", 6000, 2010));
         employeeList.add(new Employee(3, "Nima", "Female", 27, 200, "Account ", 8000, 2013));
         employeeList.add(new Employee(3, "Karel", "Female", 17, 200, "Account ", 8000, 2013));
         employeeList.add(new Employee(2, "Jaden", "Male", 21, 200, "Security", 1000, 2018));
         employeeList.add(new Employee(4, "Akanksha", "Female",28, 200, "Product Development", 12000, 2018));
-        employeeList.add(new Employee(4, "Sourav", "LGBQT",27, 200, "Product Development", 10000, 2018));
+        employeeList.add(new Employee(4, "Sourav", "Male",27, 200, "Product Development", 10000, 2018));
+        employeeList.add(new Employee(2, "Jaden", "Male", 21, 200, "Security", 2000, 2018));
         
         //Sorting on the basis of ID
         System.out.print("Sorting on the basis emp id...");
@@ -49,16 +50,34 @@ public class StreamAPIObjectExample {
   		System.out.println("Max Salary Employee name is: " + maxSalary);
   		//second max sal(CTS)
   		System.out.println("Second Max Salary is: " + employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).skip((employeeList.size()-2)).findFirst().get().getName());
+  		
+  		//last sorting only work
+  		//List<Employee> sortedEmployee = employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).sorted(Comparator.comparing(Employee::getName)).collect(Collectors.toList());
+  		//sortedEmployee.stream().forEach(emp->System.out.println("sorted on the basis of salary and name :" +emp.getName()));
 
   		//find deptname whose sal is maximum
   		Map<String, Optional<Employee>> mapEmp = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartmentName, Collectors.maxBy(Comparator.comparing(Employee::getSalary))));
   		mapEmp.forEach((character, frequency) -> System.out.println(character + ": " + frequency.get().getSalary()));
   		
+  		Map<String, Optional<Employee>> secondHighestByDept = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartmentName,
+  		                Collectors.collectingAndThen(Collectors.toList(),  list -> list.stream()
+  		                                .sorted(Comparator.comparingDouble(Employee::getSalary).reversed()) // Sort by salary (descending)
+  		                                .skip(1) // Skip the first (highest) salary
+  		                                .findFirst()))); // Get the second (optional)
+
+  		secondHighestByDept.forEach((character, frequency) -> System.out.println("Second Highest salary : "+character + ": " + frequency.get().getSalary()));
+  		
   		//Average age of male and female employee
-  		Map<String, Double> avgAgeOfMaleAndFemaleEmployees=
+  		Map<String, Double> avgAgeOfMaleAndFemaleEmployees =
 		employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)));
 		         
 		System.out.println(avgAgeOfMaleAndFemaleEmployees);
+		
+		//Total salary of each department
+		Map<String, Integer> totalSalaryOfMaleAndFemaleEmployees =
+				employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.summingInt(Employee::getSalary)));
+				         
+				System.out.println("Total salary of each department: " + totalSalaryOfMaleAndFemaleEmployees);
 		
 		//Youngest employee in Product Development departmentName
 		Employee emp = employeeList.stream().filter(e-> "Product Development".equals(e.getDepartmentName())).min(Comparator.comparing(Employee::getAge)).get();

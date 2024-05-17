@@ -16,7 +16,6 @@ public class AddTwoArrays {
         int sum = 0;
         int i = n - 1;
         int j = m - 1;
-        int k = 0;
         while (i >= 0 && j >= 0) { //for two equal array
             sum = a[i] + b[j] + carry;
             carry = 0;
@@ -28,7 +27,6 @@ public class AddTwoArrays {
             }
             i--;
             j--;
-            k++;
         }
         while (i >= 0) { // if array1>array2
             if (carry != 0) {
@@ -56,7 +54,7 @@ public class AddTwoArrays {
     }
 
     public static void main(String[] args) {
-        int A[] = { 1, 2 };
+        int A[] = { 1, 12 };
         int B[] = { 2, 1 };
         System.out.println(calc_Sum(A, A.length, B, B.length));
     }

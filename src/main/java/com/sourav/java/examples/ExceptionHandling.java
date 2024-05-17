@@ -78,6 +78,9 @@ public class ExceptionHandling {
         } catch (IOException e) {
             // Handle IOException
         	System.out.println("ArrayIndexOutOfBoundsException caught: " + e.getMessage());
+        } catch (Exception e) { //(FileNotFoundException e)- it will be unreachable coz IO is parent exception
+            // Handle IOException
+        	System.out.println("ArrayIndexOutOfBoundsException caught: " + e.getMessage());
         }
     }
 

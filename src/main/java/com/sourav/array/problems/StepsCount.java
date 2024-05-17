@@ -2,7 +2,7 @@ package com.sourav.array.problems;
 
 public class StepsCount {
 
-	//companies : amdocs, accolite, bigbasket, walmart
+	//companies : amdocs, accolite21, bigbasket, walmart, accolite24
 	
 	// Fibonacci
 	static int countWays(int n)

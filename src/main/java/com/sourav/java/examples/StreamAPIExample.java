@@ -149,7 +149,7 @@ public class StreamAPIExample {
 					}
 				});
 
-//**** with streamAPI toMap() method of terminal for sum of List
+//**** with streamAPI sum() method of terminal for sum of List
 		int sum = numbers.stream().mapToInt(Integer::intValue).sum();
 		System.out.println("sum of list is = " + sum);
 
@@ -162,7 +162,7 @@ public class StreamAPIExample {
 		if (max.isPresent())
 			System.out.println("Maximum number in List: " + max.getAsInt());
 
-//**** with streamAPI groupingBy() method - when you want vs vs vs
+//**** with streamAPI groupingBy() method
 		String input = "AABBBBDDCCCCCEEEEEEHG";
 
 		// Using Java Stream API to find frequency of characters(TechMahindra, OpenText)
@@ -194,7 +194,7 @@ public class StreamAPIExample {
 		// second max salary(accenture, coforge, synechron)
 		int secondMaxSalary = numbers.stream().sorted(Collections.reverseOrder()).skip(1).findFirst().get();
 
-		// max length word in String(EPAM)
+		// max length word in String(EPAM, Zensar)
 		String str2 = "Welcome to EPAM";
 		/*String res = Arrays.asList(str2.split(" ")).stream().max((i, j) -> Integer.compare(i.length(), j.length()))
 				.get();*/

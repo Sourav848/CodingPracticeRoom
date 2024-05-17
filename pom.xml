@@ -3,4 +3,13 @@
   <groupId>CodePracticeRoom</groupId>
   <artifactId>CodePracticeRoom</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.sourav848</groupId>
+  		<artifactId>social-login-OAuth2</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

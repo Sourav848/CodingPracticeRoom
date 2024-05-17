@@ -1,10 +1,10 @@
 package com.sourav.array.problems;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+//Companies : ThoughtFocus
 public class ArraySubsetToArray {
 
 	public static String isSubset(long a1[], long a2[], long n, long m) {

@@ -10,9 +10,9 @@ public class LargeFactorial {
 	
 		static ArrayList<Integer> bigfactorial(int N){
         //code here
-        ArrayList<Integer> ob = new ArrayList<Integer>();
+        ArrayList<Integer> ob = new ArrayList<>();
        
-        java.math.BigInteger f = new java.math.BigInteger("1");
+        BigInteger f = new BigInteger("1");
         // Multiply f with 2, 3, ...N
         for (int i = 2; i <= N; i++)
             f = f.multiply(BigInteger.valueOf(i));
@@ -33,7 +33,4 @@ public class LargeFactorial {
 			System.out.println(list);
 			
 		}
-		
-		
-
 }

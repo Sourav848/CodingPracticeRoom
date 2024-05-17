@@ -31,6 +31,10 @@ public class MiddleElementLinkedList {
 		return list.get((list.size() / 2));
 	}
 	
+	/*Method 2: Traverse linked list using two pointers. Move one pointer by one and the other pointers by two. 
+	When the second pointer reaches the end slow pointer will reach the middle of the linked list*/
+
+	
 	static int getMiddleByTwoPointer(Node head) {
 		Node ptr2 = head;
 		Node ptr1 = head;
@@ -39,17 +43,6 @@ public class MiddleElementLinkedList {
 			ptr2 = ptr2.next.next;
 		}
 		return ptr1.data;
-	}
-	static int count=0;
-	
-	public static int length(Node head) {
-		Node temp = head;
-		if (temp != null) {
-			temp = temp.next;
-			count++;
-			length(temp);
-		}
-		return count;
 	}
 
 	void printList(Node node) {
@@ -74,13 +67,9 @@ public class MiddleElementLinkedList {
 		System.out.println("Middle Element of linked list ----> " + getMiddle(head));
 		System.out.println("Second approach By two Pointer ----> "+ getMiddleByTwoPointer(head));
 	
-	    System.out.println(length(head));
-
 	}
 	
 	
 	
-	/*Method 2: Traverse linked list using two pointers. Move one pointer by one and the other pointers by two. 
-		When the second pointer reaches the end slow pointer will reach the middle of the linked list*/
-
+	
 }

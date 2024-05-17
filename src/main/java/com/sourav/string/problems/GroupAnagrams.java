@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 
  //Technique : hashing
- //companies : practo
+ //companies : practo, wipro
 
 public class GroupAnagrams {
 

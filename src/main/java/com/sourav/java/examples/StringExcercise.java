@@ -11,13 +11,19 @@ public class StringExcercise {
 
 	// Using Object's equals():
 	if (!object1.equals(object2)) { // False, different object references
-	  System.out.println("Objects are equal (using Object's equals())");
+	  System.out.println("Objects are not equal (using Object's equals())");
 	}
 
 	// Using String's equals():
 	if (string1.equals(string2)) { // True, same string content
 	  System.out.println("Strings are equal (using String's equals())");
 	}
+	
+	// Using == operator
+	if (string1 != string2) { // False, two different reference
+	  System.out.println("Strings are  not equal (using String's == operator)");
+	}
+
 	
 	String str1 = new String("Hello");
 	String str2 = str1.concat(" World");

@@ -34,14 +34,26 @@ public class RemoveDuplicateInArray {
 		}
 	}
 	
-	 public static void findDuplicate(int[] nums) {	        
-        Set<Integer> seen = new HashSet<Integer>();
-        for (int num : nums) {
-            if (seen.contains(num)) {
-            	System.out.println("Duplicate element is: "+num);  
+	private static void removeDuplicates(int[] array) {
+        int n = array.length;
+
+        // Iterate through the array
+        for (int i = 0; i < n; i++) {
+            int index = Math.abs(array[i]) % n;
+
+            // Mark the element at the calculated index as negative
+            if (array[index] > 0) {
+                array[index] = -array[index];
             }
-            seen.add(num);
         }
+
+        // Reset the array with non-negative elements
+        for (int i = 0; i < n; i++) {
+            array[i] = Math.abs(array[i]);
+        }
+        
+        for (int i=0; i<array.length; i++)  
+            System.out.print(array[i]+" ");
     }
 	
 	
@@ -55,7 +67,7 @@ public class RemoveDuplicateInArray {
            System.out.println(arr[i]+" ");  
         removeDuplicate_linkedhashset(arr, length);
         //To find duplicate elements
-        findDuplicate(arr);
+        removeDuplicates(arr);
     }  
 
 }
