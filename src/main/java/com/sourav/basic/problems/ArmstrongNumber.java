@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ArmstrongNumber {
 
 	public static void main(String args[]) {
-
+//Akanksha Practice
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a number");
 		int i = 1;
